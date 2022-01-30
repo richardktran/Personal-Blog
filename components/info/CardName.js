@@ -1,4 +1,4 @@
-import { Box, Avatar, Heading, Text } from '@chakra-ui/react'
+import { Box, Avatar, Heading, Text, useColorModeValue } from '@chakra-ui/react'
 
 const CardName = ({ avatar, name, specialist, shortDescription }) => {
     return (
@@ -7,17 +7,17 @@ const CardName = ({ avatar, name, specialist, shortDescription }) => {
             <Heading
                 as="h1"
                 fontSize={{ base: 'sm', lg: 'lg', xl: '2xl' }}
-                color='#ffffff'
+                color={useColorModeValue('#000000', '#ffffff')}
                 fontWeight="600"
                 letterSpacing='wider'
                 pt={2}
             >
                 {name}
             </Heading>
-            <Text fontSize={{ base: 'xs', lg: 'sm', xl: 'md' }} color='#DBDBDB' py={2}>{specialist}</Text>
+            <Text fontSize={{ base: 'xs', lg: 'sm', xl: 'md' }} color={useColorModeValue('#323232', '#DBDBDB')} py={2}>{specialist}</Text>
             <Text
                 fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
-                color='#DBDBDB'
+                color={useColorModeValue('#323232', '#DBDBDB')}
                 px={{ base: 2, lg: 5, xl: 10 }}
                 py={2}
                 lineHeight={{ base: 'base', lg: 'taller', xl: 'taller' }}
