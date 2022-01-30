@@ -5,12 +5,22 @@ const config = {
     useSystemColor: false,
 }
 
+const styles = {
+    global: {
+        "html, body": {
+            height: '100%'
+        },
+    },
+};
+
+
 const fonts = {
     heading: "'M PLUS Rounded 1c'",
+    body: "'Poppins'"
 }
 
 const theme = extendTheme({
-    config, fonts
+    config, fonts, styles
 })
 
 export default theme;
