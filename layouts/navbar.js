@@ -8,7 +8,7 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-    Link,
+    Box,
     Text
 } from '@chakra-ui/react'
 import React from 'react';
@@ -20,12 +20,23 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 export default function Navbar({ path }) {
     const { toggleColorMode } = useColorMode()
     return (
-        <Flex>
+        <Box
+            position="fixed"
+            as="nav"
+            w="100%"
+            top="0"
+            pt='1rem'
+            width="100%"
+            height="4rem"
+            css={{ backdropFilter: 'blur(10px)' }}
+            // bg={useColorModeValue('#FFFFFF', '#1E1E1E')}
+            zIndex={0}
+        >
             <Flex
                 pos='fixed'
-                top="2rem"
                 right='1rem'
                 align='center'
+                pr={{ base: '1rem', lg: '3rem' }}
             >
                 <Flex
                     display={{ base: 'none', lg: 'flex' }}
@@ -71,7 +82,7 @@ export default function Navbar({ path }) {
                     </Menu>
                 </Flex>
             </Flex>
-        </Flex>
+        </Box>
     );
 }
 
@@ -81,6 +92,12 @@ const LinkItem = ({ href, children, path }) => {
     return (
         <NextLink href={href} passHref>
             <Button
+                _focus={{
+                    outline: 'none',
+                }}
+                _hover={{
+                    backgroundColor: undefined
+                }}
                 variant='ghost'
                 aria-label={children}
                 w='100%'

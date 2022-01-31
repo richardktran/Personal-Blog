@@ -14,7 +14,9 @@ export default function ProfileSection() {
             flexDir='column' w='25%'
             bg={bg}
             minHeight="100%"
-            d={{ base: 'none', md: 'none', lg: 'flex', xl: 'flex' }}>
+            d={{ base: 'none', md: 'none', lg: 'flex', xl: 'flex' }}
+            zIndex={0}
+        >
             <Flex
                 as='section'
                 direction='column'

@@ -16,7 +16,7 @@ const styles = {
 
 const fonts = {
     heading: "'M PLUS Rounded 1c'",
-    body: "'Poppins'"
+    // body: "'Poppins'"
 }
 
 const theme = extendTheme({
