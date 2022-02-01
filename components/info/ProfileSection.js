@@ -5,7 +5,7 @@ import ProfileDetail from './ProfileDetails'
 import Social from './Social';
 
 export default function ProfileSection() {
-    const bg = useColorModeValue('#EEFBF9', '#0B0E10')
+    const bg = useColorModeValue('gray.100', '#0B0E10')
     return (
         <Box
             position="fixed"
