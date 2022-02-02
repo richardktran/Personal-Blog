@@ -34,7 +34,7 @@ export default function Layout({ children, router }) {
             </Head>
 
 
-            <Navbar path={router.asPath} toggleShowInfo={handleShowInfo} />
+
             <Box
                 pl={{ base: '0', md: '0', lg: '25%', xl: '25%' }}
                 pt='6rem'
@@ -46,6 +46,7 @@ export default function Layout({ children, router }) {
 
 
             </Box>
+            <Navbar path={router.asPath} toggleShowInfo={handleShowInfo} />
 
             {
                 isLargerThan960 && <ProfileSection closeInfo={handleCloseInfo} />

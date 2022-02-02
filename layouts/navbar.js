@@ -12,17 +12,40 @@ import {
     Text,
     Heading,
     Avatar,
+    Image,
+    HStack
 } from '@chakra-ui/react'
 import React, { useState } from 'react';
 import NextLink from 'next/link'
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoMdUndo } from 'react-icons/io';
+import useTrans from '../pages/hooks/useTrans'
+import { useRouter } from 'next/router';
+import { useCookies } from 'react-cookie';
+
+
+
+
+
 export default function Navbar({ path, toggleShowInfo }) {
+    const [cookie, setCookie] = useCookies(['NEXT_LOCALE']);
+    const trans = useTrans()
+    const router = useRouter()
+
+    const { locale } = useRouter()
+
     const { toggleColorMode } = useColorMode()
 
     const setShowInfo = () => {
         toggleShowInfo();
+    }
+
+    const changeLang = (lang) => {
+        router.push('/', '/', { locale: lang })
+        if (cookie.NEXT_LOCALE !== lang) {
+            setCookie("NEXT_LOCALE", lang, { path: "/" });
+        }
     }
 
     return (
@@ -51,7 +74,7 @@ export default function Navbar({ path, toggleShowInfo }) {
                     </Heading>
                     <Box>
                         <IoMdUndo size={30} color="#81E6D9" />
-                        <Text>Look at my info</Text>
+                        <Text>{trans.navbar.look_profile}</Text>
                     </Box>
 
                 </Flex>
@@ -67,13 +90,13 @@ export default function Navbar({ path, toggleShowInfo }) {
                         mr={5}
                     >
                         <LinkItem href='/' path={path}>
-                            My Blog
+                            {trans.navbar.my_blog}
                         </LinkItem>
                         <LinkItem href='/category' path={path}>
-                            Category
+                            {trans.navbar.category}
                         </LinkItem>
                         <LinkItem href='/about' path={path}>
-                            About me
+                            {trans.navbar.about_me}
                         </LinkItem>
                     </Flex>
                     <IconButton
@@ -81,9 +104,24 @@ export default function Navbar({ path, toggleShowInfo }) {
                         colorScheme={useColorModeValue('purple', 'orange')}
                         icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
                         onClick={toggleColorMode}
+
                     />
-                    <Flex display={{ base: 'flex', lg: 'none' }}>
+
+                    <Flex d={{ base: 'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }} mx={3} >
                         <Menu >
+                            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                                {locale == 'vi' ? "VI" : "EN"}
+                            </MenuButton>
+                            <MenuList>
+                                <MenuItem onClick={() => changeLang('vi')}>Việt Nam</MenuItem>
+                                <MenuItem onClick={() => changeLang('en')}>English</MenuItem>
+                            </MenuList>
+                        </Menu>
+                    </Flex>
+
+                    {/* Responsive */}
+                    <Flex display={{ base: 'flex', lg: 'none' }}>
+                        <Menu zIndex={1000}>
                             <MenuButton
                                 as={IconButton}
                                 icon={<HamburgerIcon />}
@@ -94,14 +132,22 @@ export default function Navbar({ path, toggleShowInfo }) {
                             />
                             <MenuList>
                                 <NextLink href="/" passHref>
-                                    <MenuItem>My blog</MenuItem>
+                                    <MenuItem>{trans.navbar.my_blog}</MenuItem>
                                 </NextLink>
                                 <NextLink href="/category" passHref>
-                                    <MenuItem>Category</MenuItem>
+                                    <MenuItem>{trans.navbar.category}</MenuItem>
                                 </NextLink>
                                 <NextLink href="/about" passHref>
-                                    <MenuItem>About</MenuItem>
+                                    <MenuItem>{trans.navbar.about_me}</MenuItem>
                                 </NextLink>
+                                <HStack spacing={5} mt={2} ml={5}>
+                                    <Box boxSize='50px' onClick={() => changeLang('vi')}>
+                                        <Image src='/images/vn_flag.svg' alt='Viet Nam' />
+                                    </Box>
+                                    <Box boxSize='50px' onClick={() => changeLang('en')}>
+                                        <Image src='/images/en_flag.svg' alt='English' />
+                                    </Box>
+                                </HStack>
                             </MenuList>
                         </Menu>
                     </Flex>
@@ -128,6 +174,7 @@ const LinkItem = ({ href, children, path }) => {
                 aria-label={children}
                 w='100%'
                 bgColor={active ? '#8BCEC6' : undefined}
+                ml={2}
             >
                 <Text fontSize='md' fontWeight='semibold'>{children}</Text>
             </Button>

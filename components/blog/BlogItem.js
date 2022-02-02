@@ -2,9 +2,10 @@ import React from 'react';
 import { Box, Text, Heading, Flex, HStack, useColorModeValue } from "@chakra-ui/react";
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa";
+import useTrans from '../../pages/hooks/useTrans';
 
 export default function BlogItem({ href }) {
-
+    const trans = useTrans()
     const bg = useColorModeValue('gray.100', '#2B2B2B')
     const textColor = useColorModeValue('#000000', '#ffffff')
     const tagColor = useColorModeValue('#0A594F', '#81E6D9')
@@ -50,7 +51,7 @@ export default function BlogItem({ href }) {
                     <a>
                         <Flex align='center'>
                             <Text color={tagColor} mr={3} fontSize='sm' fontWeight='semibold'>
-                                Read more {' '}
+                                {trans.blog.read_more} {' '}
                             </Text>
                             <FaArrowRight color={tagColor} />
                         </Flex>

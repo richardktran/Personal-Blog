@@ -4,10 +4,11 @@ import CardName from './CardName'
 import ProfileDetail from './ProfileDetails'
 import Social from './Social';
 import { CloseIcon } from '@chakra-ui/icons'
+import useTrans from '../../pages/hooks/useTrans';
 
 export default function ProfileSection({ closeInfo }) {
     const bg = useColorModeValue('gray.100', '#0B0E10')
-
+    const trans = useTrans()
 
 
     return (
@@ -40,9 +41,9 @@ export default function ProfileSection({ closeInfo }) {
             >
                 <CardName
                     avatar="/images/avatar.jpg"
-                    name="Tran Dang Khoa"
-                    specialist="Software Engineering"
-                    shortDescription="I’m a oftware engineer with 5+ years experience in commercial application development. Eager to join Cyclone Inc. to build innovative and cutting edge business solutions for the impressive suite of clients within its global reach."
+                    name={trans.profile.name}
+                    specialist={trans.profile.specialist}
+                    shortDescription={trans.profile.short_description}
                 />
 
                 <ProfileDetail

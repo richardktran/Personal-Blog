@@ -1,9 +1,12 @@
 import { Box, Text, Flex, Spacer, HStack, useColorModeValue } from '@chakra-ui/react'
 import { FaBirthdayCake, FaLinkedinIn, FaGithub, FaExternalLinkAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import useTrans from '../../pages/hooks/useTrans';
 
 const ProfileDetail = ({ email, phone, birthDate }) => {
+    const trans = useTrans();
     const fillColor = useColorModeValue('#000000', '#ffffff');
     const blurColor = useColorModeValue('#323232', '#DBDBDB');
+
     return (
         <Flex direction="column" w='80%'>
             <Text
@@ -12,8 +15,9 @@ const ProfileDetail = ({ email, phone, birthDate }) => {
                 fontSize={{ base: 'sm', lg: 'md', xl: 'lg' }}
                 color={fillColor}
                 letterSpacing={{ base: '0.2em', lg: '0.2em', xl: '0.4em' }}
+                textTransform='uppercase'
             >
-                PROFILE
+                {trans.profile.profile}
             </Text>
             <Box w='100%' my={2} h={0.5} bg={fillColor}></Box>
             <HStack
@@ -35,7 +39,7 @@ const ProfileDetail = ({ email, phone, birthDate }) => {
                 spacing={{ base: '6px', lg: '8px', xl: '16px' }}
             >
                 <FaBirthdayCake fontSize={{ base: 'sm', lg: 'md', xl: 'lg' }} color={fillColor} />
-                <Text letterSpacing={{ base: 'wide', lg: 'wide', xl: 'widest' }} fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }} color={blurColor}>{birthDate}</Text>
+                <Text letterSpacing={{ base: 'wide', lg: 'wide', xl: 'widest' }} fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }} color={blurColor}>{trans.profile.bỉthdate}</Text>
             </HStack>
         </Flex>
     )
