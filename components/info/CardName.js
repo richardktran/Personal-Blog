@@ -18,7 +18,7 @@ const CardName = ({ avatar, name, specialist, shortDescription }) => {
             <Text
                 fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
                 color={useColorModeValue('#323232', '#DBDBDB')}
-                px={{ base: 2, lg: 5, xl: 10 }}
+                px={{ base: 6, lg: 7, xl: 10 }}
                 py={2}
                 lineHeight={{ base: 'base', lg: 'taller', xl: 'taller' }}
                 textAlign='left'

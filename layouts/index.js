@@ -1,10 +1,23 @@
-import { Box, HStack, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, Heading, Avatar, Text, useColorModeValue } from '@chakra-ui/react';
 import Head from 'next/head';
-import React from 'react';
+import React, { useState } from 'react';
+import { useMediaQuery } from '@chakra-ui/react'
 import ProfileSection from '../components/info/ProfileSection';
 import Navbar from './navbar';
 
 export default function Layout({ children, router }) {
+
+    const [isShowInfo, setShowInfo] = useState(false)
+    const [isLargerThan960] = useMediaQuery('(min-width: 960px)')
+
+    const handleShowInfo = () => {
+        setShowInfo(!isShowInfo)
+    }
+
+    const handleCloseInfo = () => {
+        setShowInfo(false)
+    }
+
     return (
         <>
             <Head>
@@ -19,8 +32,9 @@ export default function Layout({ children, router }) {
                 <meta property="og:image" content="/card.png" />
                 <title>Richard Annowit - Homepage</title>
             </Head>
-            <Navbar path={router.asPath} />
-            <ProfileSection />
+
+
+            <Navbar path={router.asPath} toggleShowInfo={handleShowInfo} />
             <Box
                 pl={{ base: '0', md: '0', lg: '25%', xl: '25%' }}
                 pt='6rem'
@@ -29,7 +43,35 @@ export default function Layout({ children, router }) {
                 minHeight='100vh'
             >
                 {children}
+
+
             </Box>
+
+            {
+                isLargerThan960 && <ProfileSection closeInfo={handleCloseInfo} />
+            }
+
+            {
+                isShowInfo ?
+                    (
+                        <>
+                            <Box
+                                className='blur'
+                                position='fixed'
+                                top={0}
+                                left={0}
+                                d={{ base: 'block', sm: 'block', md: 'block', lg: 'none', xl: 'none' }}
+                                w='100%'
+                                h='100vh'
+                                bg="gray.100"
+                                opacity="10%"
+                                onClick={handleCloseInfo}
+                            />
+                            <ProfileSection closeInfo={handleCloseInfo} />
+                        </>
+                    )
+                    : <></>
+            }
 
         </>
     );

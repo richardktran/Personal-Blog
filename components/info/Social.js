@@ -6,7 +6,7 @@ const Social = ({ linkedinUrl, githubUrl }) => {
     const fillColor = useColorModeValue('#000000', '#ffffff');
     const blurColor = useColorModeValue('#323232', '#DBDBDB');
     return (
-        <Flex justify='center' w='100%' h={10} my={4} px={{ base: 0, lg: 4, xl: 8 }}>
+        <Flex justify='center' w='100%' h={10} my={4} px={{ base: 5, sm: 5, md: 5, lg: 6, xl: 8 }}>
             <HStack as='a' target="_blank" rel="noopener noreferrer" href={linkedinUrl} >
                 <FaLinkedinIn size={25} color={fillColor} />
                 <Text as='span' mx={2} fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }} color={blurColor}>Linkedin</Text>

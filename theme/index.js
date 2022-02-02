@@ -1,4 +1,6 @@
 import { extendTheme } from '@chakra-ui/react'
+import { createBreakpoints } from '@chakra-ui/theme-tools'
+
 
 const config = {
     initialColorMode: 'dark',
@@ -13,6 +15,14 @@ const styles = {
     },
 };
 
+const breakpoints = createBreakpoints({
+    sm: "320px",
+    md: "624px",
+    lg: "960px",
+    xl: "1200px",
+    '2xl': '1536px',
+})
+
 
 const fonts = {
     heading: "'M PLUS Rounded 1c'",
@@ -20,7 +30,8 @@ const fonts = {
 }
 
 const theme = extendTheme({
-    config, fonts, styles
+    config, fonts, styles, breakpoints
 })
+
 
 export default theme;

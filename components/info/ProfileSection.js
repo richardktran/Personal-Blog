@@ -3,24 +3,38 @@ import { Box, Flex, useColorModeValue } from '@chakra-ui/react'
 import CardName from './CardName'
 import ProfileDetail from './ProfileDetails'
 import Social from './Social';
+import { CloseIcon } from '@chakra-ui/icons'
 
-export default function ProfileSection() {
+export default function ProfileSection({ closeInfo }) {
     const bg = useColorModeValue('gray.100', '#0B0E10')
+
+
+
     return (
         <Box
             position="fixed"
             top={0}
             justifyContent='space-between'
-            flexDir='column' w='25%'
+            flexDir='column' w={{ base: '100%', sm: '70%', md: '50%', lg: '25%', xl: '25%' }}
             bg={bg}
             minHeight="100%"
-            d={{ base: 'none', md: 'none', lg: 'flex', xl: 'flex' }}
+            d='flex'
             zIndex={0}
         >
             <Flex
+                pos="absolute"
+                right='1rem'
+                top='1rem'
+                _hover={{ cursor: 'pointer' }}
+                onClick={() => closeInfo()}
+                display={{ base: 'flex', sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}
+            >
+                <CloseIcon />
+            </Flex>
+            <Flex
                 as='section'
                 direction='column'
-                pt={{ base: 2, lg: 3, xl: 8 }}
+                pt={{ base: 5, lg: 5, xl: 8 }}
                 textAlign='center'
                 align='center'
             >
