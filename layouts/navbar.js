@@ -113,7 +113,7 @@ export default function Navbar({ path, toggleShowInfo }) {
                                 {locale == 'vi' ? "VI" : "EN"}
                             </MenuButton>
                             <MenuList>
-                                <MenuItem onClick={() => changeLang('vi')}>Việt Nam</MenuItem>
+                                <MenuItem onClick={() => changeLang('vi')}>Tiếng Việt</MenuItem>
                                 <MenuItem onClick={() => changeLang('en')}>English</MenuItem>
                             </MenuList>
                         </Menu>
