@@ -1,7 +1,8 @@
-import { Box, Circle, Flex, Heading, HStack, Text, VStack } from '@chakra-ui/react';
+import { Box, Image, Flex, Heading, HStack, Text, VStack, UnorderedList, ListItem } from '@chakra-ui/react';
 import Head from 'next/head';
 import React from 'react';
 import Education from '../components/about/Education';
+import Projects from '../components/about/Projects';
 import Skill from '../components/about/Skill';
 import Summary from '../components/about/summary';
 import WorkExperience from '../components/about/WorkExperience';
@@ -20,10 +21,12 @@ export default function About() {
                 mb={10}
                 px={12}
             >
-                <Summary mb={50} />
+                <Summary mb={50} px={12} />
                 <WorkExperience my={50} />
                 <Education my={50} />
                 <Skill />
+
+                <Projects px={12} />
             </Flex>
         </>
     )
