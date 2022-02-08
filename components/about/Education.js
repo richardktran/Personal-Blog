@@ -5,7 +5,7 @@ import Timeline from '../common/Timeline';
 
 export default function Education({ ...props }) {
     return (
-        <Flex direction="column" alignItems="center" my={3}  {...props}>
+        <Flex direction="column" alignItems="center"  {...props}>
             <Heading as="h1" color="#81E6D9" fontWeight="bold" >EDUCATION</Heading>
             <Flex direction="column" align="center" h="100%" minW="100%" my={5}>
                 <HStack alignItems="flex-start" spacing={10}>

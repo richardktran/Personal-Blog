@@ -35,17 +35,17 @@ export default function Layout({ children, router }) {
 
 
 
-            <Box
+            <Flex
                 pl={{ base: '0', md: '0', lg: '25%', xl: '25%' }}
                 pt='6rem'
                 w='100%'
                 bg={useColorModeValue('#FFFFFF', '#3D3D3D')}
-                minHeight='100vh'
+                direction='column'
             >
                 {children}
 
 
-            </Box>
+            </Flex>
             <Navbar path={router.asPath} toggleShowInfo={handleShowInfo} />
 
             {
