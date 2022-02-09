@@ -1,7 +1,9 @@
 import React from 'react';
 import { Image, Flex, Heading, Text } from '@chakra-ui/react';
+import useTrans from '../../pages/hooks/useTrans';
 
 export default function ProjectCard({ img, name, description, technologies, imgRight = false, bgColor, nameColor, subColor, ...props }) {
+    const trans = useTrans();
     return (
         <Flex direction={imgRight ? 'row-reverse' : 'row'} alignItems="center" w="80%" my={7} {...props}>
             <Image src={img} borderRadius="16px" h="250px" objectFit="fill " alt="QF formula" />
@@ -25,7 +27,7 @@ export default function ProjectCard({ img, name, description, technologies, imgR
                     textAlign='left'
                     color={subColor}
                 >
-                    <span><strong>Technologies:</strong></span> <span>{technologies}</span>
+                    <span><strong>{trans.about.technologies}:</strong></span> <span>{technologies}</span>
                 </Text>
             </Flex>
         </Flex>

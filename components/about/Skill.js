@@ -11,11 +11,15 @@ export default function Skill({ ...props }) {
 
 
     return (
-        <Flex direction="column" alignItems="center" my={3}  {...props}>
-            <Heading as="h1" color={headingColor} fontWeight="bold" my={5}>SKILLS</Heading>
+        <Flex w="60%" direction="column" alignItems="center" my={3}  {...props}>
+            <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" my={5}>
+                {trans.about.skill_title}
+            </Heading>
             <HStack spacing={10}>
                 <Flex direction="column" align="flex-start" bgColor={bgColor} borderRadius={20} px={7} py={7}>
-                    <Heading as="h6" color={stressTextColor} fontWeight="bold" fontSize="lg" alignSelf="center"> PROGRAMMING LANGUAGE:</Heading>
+                    <Heading as="h6" color={stressTextColor} textTransform='uppercase' fontWeight="bold" fontSize="lg" alignSelf="center">
+                        {trans.about.programming_language}:
+                    </Heading>
                     <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
                         <ListItem>PHP</ListItem>
                         <ListItem>Javascript</ListItem>
@@ -24,7 +28,9 @@ export default function Skill({ ...props }) {
                     </UnorderedList>
                 </Flex>
                 <Flex direction="column" align="flex-start" bgColor={bgColor} borderRadius={20} px={7} py={7}>
-                    <Heading as="h6" fontSize="lg" fontWeight="bold" color={stressTextColor} alignSelf="center"> FRAMEWORKS/PLATFORM:</Heading>
+                    <Heading as="h6" fontSize="lg" textTransform='uppercase' fontWeight="bold" color={stressTextColor} alignSelf="center">
+                        {trans.about.framework_platform}:
+                    </Heading>
                     <UnorderedList color="#F5F5F5" color={grayTextColor} fontWeight="normal" ml={7} mt={3}>
                         <ListItem>Laravel</ListItem>
                         <ListItem>NextJS/ReactJS</ListItem>
@@ -34,11 +40,13 @@ export default function Skill({ ...props }) {
                 </Flex>
             </HStack>
             <Flex direction="column" align="flex-start" bgColor={bgColor} borderRadius={20} my={5} px={7} py={7}>
-                <Heading as="h6" fontSize="lg" color={stressTextColor} fontWeight="bold" alignSelf="center"> KNOWLEDGE</Heading>
+                <Heading as="h6" fontSize="lg" textTransform='uppercase' color={stressTextColor} fontWeight="bold" alignSelf="center">
+                    {trans.about.knowledge}
+                </Heading>
                 <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
-                    <ListItem>Good understanding about OOP, the Agile and Scrum process,...</ListItem>
-                    <ListItem>Good understanding software design, database design, RestfulAPI,...</ListItem>
-                    <ListItem>Good time management, action plan, teamwork skills, and problem solving...</ListItem>
+                    <ListItem>{trans.about.knowledge1}</ListItem>
+                    <ListItem>{trans.about.knowledge2}</ListItem>
+                    <ListItem>{trans.about.knowledge3}</ListItem>
                 </UnorderedList>
             </Flex>
         </Flex>

@@ -13,14 +13,16 @@ export default function Projects({ ...props }) {
 
     return (
         <Flex direction="column" w="100%" alignItems="center" justifyItems="center" {...props}>
-            <Heading as="h1" color={headingColor} fontWeight="bold" my={5}>PROJECTS</Heading>
+            <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" my={5}>
+                {trans.about.projects_title}
+            </Heading>
             <ProjectCard
                 bgColor={bgColor}
                 nameColor={stressTextColor}
                 subColor={grayTextColor}
                 img="/images/projects/qf.png"
-                name="Health Care In Can Tho App"
-                description="A free mobile app delivering Lancaster University services, resources, and information - at your fingertips"
+                name={trans.about.health_care_name}
+                description={trans.about.health_care_description}
                 technologies="Flutter framework, Dart language, Firebase"
             />
 
@@ -30,8 +32,8 @@ export default function Projects({ ...props }) {
                 subColor={grayTextColor}
                 imgRight
                 img="/images/projects/mobile.png"
-                name="Health Care In Can Tho App"
-                description="A free mobile app delivering Lancaster University services, resources, and information - at your fingertips"
+                name={trans.about.health_care_name}
+                description={trans.about.health_care_description}
                 technologies="Flutter framework, Dart language, Firebase"
             />
 
@@ -40,8 +42,8 @@ export default function Projects({ ...props }) {
                 nameColor={stressTextColor}
                 subColor={grayTextColor}
                 img="/images/projects/qf.png"
-                name="Health Care In Can Tho App"
-                description="A free mobile app delivering Lancaster University services, resources, and information - at your fingertips"
+                name={trans.about.health_care_name}
+                description={trans.about.health_care_description}
                 technologies="Flutter framework, Dart language, Firebase"
             />
         </Flex>

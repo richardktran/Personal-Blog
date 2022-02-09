@@ -16,7 +16,9 @@ export default function Education({ ...props }) {
 
     return (
         <Flex direction="column" alignItems="center"  {...props}>
-            <Heading as="h1" color={headingColor} fontWeight="bold" >EDUCATION</Heading>
+            <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" >
+                {trans.about.education_title}
+            </Heading>
             <Flex direction="column" align="center" h="100%" minW="100%" my={5}>
                 <HStack alignItems="flex-start" spacing={10}>
                     <HStack alignItems="center" spacing={5}>
@@ -25,9 +27,11 @@ export default function Education({ ...props }) {
                         </Box>
 
                         <VStack>
-                            <Heading as="h6" color={stressTextColor} fontSize="2xl" pt={3} textAlign="right" >Can Tho University</Heading>
+                            <Heading as="h6" color={stressTextColor} fontSize="2xl" pt={3} textAlign="right" >
+                                {trans.about.university}
+                            </Heading>
                             <Flex direction="column" color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8} px={5} py={3}>
-                                <Text><span><strong>Degree grade:</strong></span> Excellent</Text>
+                                <Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.excellent}</Text>
                                 <Text><span><strong>GPA:</strong></span> 3.6/4</Text>
                             </Flex>
                         </VStack>
@@ -40,9 +44,9 @@ export default function Education({ ...props }) {
 
                     <HStack>
                         <VStack>
-                            <Heading as="h6" fontSize="2xl" pt={3}>Bachelor Degree</Heading>
+                            <Heading as="h6" fontSize="2xl" pt={3}>{trans.about.degree}</Heading>
                             <Flex direction="column" color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8} px={5} py={3}>
-                                <Text><strong>Software Engineering</strong></Text>
+                                <Text><strong>{trans.about.specialist}</strong></Text>
                                 <Text>2018 - 2022</Text>
                             </Flex>
                         </VStack>

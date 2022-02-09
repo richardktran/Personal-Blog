@@ -17,7 +17,9 @@ export default function WorkExperience({ ...props }) {
 
     return (
         <Flex direction="column" alignItems="center" my={3}  {...props}>
-            <Heading as="h1" color={headingColor} fontWeight="bold" >WORK EXPERIENCE</Heading>
+            <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" >
+                {trans.about.work_experience_title}
+            </Heading>
             <Flex direction="column" align="center" h="100%" minW="100%" my={5}>
                 <HStack alignItems="flex-start" spacing={10}>
                     <HStack alignItems="center" spacing={5}>
@@ -28,7 +30,7 @@ export default function WorkExperience({ ...props }) {
                         <VStack alignItems="flex-end">
                             <Heading as="h6" color={stressTextColor} fontSize="2xl" textAlign="right" pt={3} >NashTech Vietnam</Heading>
                             <Flex direction="column" align="flex-end" color={grayTextColor}>
-                                <Text textAlign="right">Internship</Text>
+                                <Text textAlign="right">{trans.about.position}</Text>
                                 <Text textAlign="right" opacity="90%">06/2021 - 09/2021</Text>
                             </Flex>
                         </VStack>
@@ -43,10 +45,10 @@ export default function WorkExperience({ ...props }) {
                     <HStack>
                         <VStack>
                             <Flex direction="column" maxW="18em" color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8} px={5} py={3}>
-                                <Text as="p" fontSize="sm"> - Work with SCRUM team up to 9 member.</Text>
-                                <Text as="p" fontSize="sm"> - Complete 2 small project during intership program.</Text>
+                                <Text as="p" fontSize="sm">{trans.about.nashtech_description1}</Text>
+                                <Text as="p" fontSize="sm">{trans.about.nashtech_description2}</Text>
                                 <Text as="p" fontSize="sm">
-                                    - Collaborate with team leader to define and improve the team’s workflow, which	reduce bugs	related	to configuration or conflict.
+                                    {trans.about.nashtech_description3}
                                 </Text>
                             </Flex>
                         </VStack>
