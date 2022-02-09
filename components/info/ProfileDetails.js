@@ -4,7 +4,7 @@ import useTrans from '../../pages/hooks/useTrans';
 
 const ProfileDetail = ({ email, phone, birthDate }) => {
     const trans = useTrans();
-    const fillColor = useColorModeValue('#000000', '#ffffff');
+    const fillColor = useColorModeValue('#323232', '#ffffff');
     const blurColor = useColorModeValue('#323232', '#DBDBDB');
 
     return (
@@ -25,7 +25,15 @@ const ProfileDetail = ({ email, phone, birthDate }) => {
                 spacing={{ base: '6px', lg: '8px', xl: '16px' }}
             >
                 <FaEnvelope fontSize={{ base: 'sm', lg: 'md', xl: 'lg' }} color={fillColor} />
-                <Text letterSpacing={{ base: 'wide', lg: 'wide', xl: 'widest' }} fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }} color={blurColor}>{email}</Text>
+                <Text
+                    as="a"
+                    href={`mailto: ${email}`}
+                    letterSpacing={{ base: 'wide', lg: 'wide', xl: 'widest' }}
+                    fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
+                    color={blurColor}
+                >
+                    {email}
+                </Text>
             </HStack>
             <HStack
                 py={2}
@@ -41,7 +49,7 @@ const ProfileDetail = ({ email, phone, birthDate }) => {
                 <FaBirthdayCake fontSize={{ base: 'sm', lg: 'md', xl: 'lg' }} color={fillColor} />
                 <Text letterSpacing={{ base: 'wide', lg: 'wide', xl: 'widest' }} fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }} color={blurColor}>{trans.profile.bỉthdate}</Text>
             </HStack>
-        </Flex>
+        </Flex >
     )
 }
 

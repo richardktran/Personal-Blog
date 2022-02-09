@@ -12,6 +12,12 @@ const styles = {
         "html, body": {
             height: '100%'
         },
+        "p": {
+            fontWeight: 'normal',
+        },
+        "strong": {
+            fontWeight: 'semibold',
+        }
     },
 };
 
@@ -25,12 +31,20 @@ const breakpoints = createBreakpoints({
 
 
 const fonts = {
-    heading: "'M PLUS Rounded 1c'",
-    // body: "'Poppins'"
+    heading: 'Nunito Sans',
+    body: 'Nunito Sans'
 }
 
+const fontWeights = {
+    normal: 400,
+    medium: 600,
+    semibold: 700,
+    bold: 700,
+}
+
+
 const theme = extendTheme({
-    config, fonts, styles, breakpoints
+    config, fonts, styles, breakpoints, fontWeights
 })
 
 

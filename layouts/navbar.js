@@ -109,7 +109,7 @@ export default function Navbar({ path, toggleShowInfo }) {
 
                     <Flex d={{ base: 'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }} mx={3} >
                         <Menu >
-                            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} >
                                 {locale == 'vi' ? "VI" : "EN"}
                             </MenuButton>
                             <MenuList>
@@ -121,7 +121,7 @@ export default function Navbar({ path, toggleShowInfo }) {
 
                     {/* Responsive */}
                     <Flex display={{ base: 'flex', lg: 'none' }}>
-                        <Menu zIndex={1000}>
+                        <Menu zIndex={1000} >
                             <MenuButton
                                 as={IconButton}
                                 icon={<HamburgerIcon />}
@@ -130,7 +130,7 @@ export default function Navbar({ path, toggleShowInfo }) {
                                 ml={3}
                                 aria-label="Open Menu"
                             />
-                            <MenuList>
+                            <MenuList >
                                 <NextLink href="/" passHref>
                                     <MenuItem>{trans.navbar.my_blog}</MenuItem>
                                 </NextLink>
@@ -173,10 +173,11 @@ const LinkItem = ({ href, children, path }) => {
                 variant='ghost'
                 aria-label={children}
                 w='100%'
-                bgColor={active ? '#8BCEC6' : undefined}
+                bgColor={active ? '#22B07D' : undefined}
+                color={active ? '#FFFFFF' : undefined}
                 ml={2}
             >
-                <Text fontSize='md' fontWeight='semibold'>{children}</Text>
+                <Heading fontSize='md' fontWeight='bold'>{children}</Heading>
             </Button>
         </NextLink>
     );
