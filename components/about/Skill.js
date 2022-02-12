@@ -1,4 +1,4 @@
-import { Flex, Heading, HStack, ListItem, Text, UnorderedList, useColorModeValue, VStack } from '@chakra-ui/react';
+import { Flex, Heading, HStack, ListItem, Stack, Text, UnorderedList, useColorModeValue, VStack } from '@chakra-ui/react';
 import React from 'react';
 import useTrans from '../../pages/hooks/useTrans';
 
@@ -11,14 +11,14 @@ export default function Skill({ ...props }) {
 
 
     return (
-        <Flex w="60%" direction="column" alignItems="center" my={3}  {...props}>
+        <Flex w={{ base: '90%', md: '90%', lg: '70%', xl: '70%' }} direction="column" alignItems="center" my={3}  {...props}>
             <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" my={5}>
                 {trans.about.skill_title}
             </Heading>
-            <HStack spacing={10}>
+            <Stack w="100%" justify="center" spacing={{ base: '5', md: '5', lg: '8', xl: '10' }} direction={{ base: 'column', md: 'row' }}>
                 <Flex direction="column" align="flex-start" bgColor={bgColor} borderRadius={20} px={7} py={7}>
-                    <Heading as="h6" color={stressTextColor} textTransform='uppercase' fontWeight="bold" fontSize="lg" alignSelf="center">
-                        {trans.about.programming_language}:
+                    <Heading as="h6" color={stressTextColor} textTransform='uppercase' fontWeight="bold" fontSize="md" alignSelf="center">
+                        <nobr>{trans.about.programming_language}:</nobr>
                     </Heading>
                     <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
                         <ListItem>PHP</ListItem>
@@ -28,7 +28,7 @@ export default function Skill({ ...props }) {
                     </UnorderedList>
                 </Flex>
                 <Flex direction="column" align="flex-start" bgColor={bgColor} borderRadius={20} px={7} py={7}>
-                    <Heading as="h6" fontSize="lg" textTransform='uppercase' fontWeight="bold" color={stressTextColor} alignSelf="center">
+                    <Heading as="h6" fontSize="md" textTransform='uppercase' fontWeight="bold" color={stressTextColor} alignSelf="center">
                         {trans.about.framework_platform}:
                     </Heading>
                     <UnorderedList color="#F5F5F5" color={grayTextColor} fontWeight="normal" ml={7} mt={3}>
@@ -38,7 +38,7 @@ export default function Skill({ ...props }) {
                         <ListItem>Flutter</ListItem>
                     </UnorderedList>
                 </Flex>
-            </HStack>
+            </Stack >
             <Flex direction="column" align="flex-start" bgColor={bgColor} borderRadius={20} my={5} px={7} py={7}>
                 <Heading as="h6" fontSize="lg" textTransform='uppercase' color={stressTextColor} fontWeight="bold" alignSelf="center">
                     {trans.about.knowledge}
@@ -49,6 +49,6 @@ export default function Skill({ ...props }) {
                     <ListItem>{trans.about.knowledge3}</ListItem>
                 </UnorderedList>
             </Flex>
-        </Flex>
+        </Flex >
     )
 }

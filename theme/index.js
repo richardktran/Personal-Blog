@@ -10,7 +10,7 @@ const config = {
 const styles = {
     global: {
         "html, body": {
-            height: '100%'
+            height: '100%',
         },
         "p": {
             fontWeight: 'normal',

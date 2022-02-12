@@ -32,3 +32,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Các project:
+
+- Personal web blog - 27/01/2022 -> Present
+- QR Scanner Museum Flutter- 22/12/2021
+- HealthCare in Can Tho Flutter - 30/11/2021
+- Wowfood NodeJS- 15/11/2021
+- E-commerce php thuần - 24/11/2021
+- AMS Laravel/react/redux- 15/09/2021
+- Bookworm Laravel/ReactJS - 26/07/2021
+- Knight Tour and Eight Queens C#- 05/06/2021
+- Ứng dụng gợi ý công thức QF php thuần- 21/01/2017
+
+Các chứng chỉ:
+
+- Acknowledgement of completion: The Rookies Program - 15/9/2021
+- Olympic tin học sinh viên việt nam 2020 - 11/12/2020
+- Google Hash Code 2020 - 02/2020
+- Perform Foundational Data, ML, and AI Tasks in Google Cloud - 6/8/2020
+- Google Code Jam - 05/04/2019
+- Snackdown 2019 Certificates Participation - 18/03/2019
+- Snackdown 2017 Certificate of Participation - 28/06/2017

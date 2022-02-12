@@ -41,9 +41,7 @@ export default {
         'knowledge2': 'Good understanding of software design, database design, RestfulAPI,...',
         'knowledge3': 'Good time management, action plan, teamwork skills, and problem solving...',
 
-        'projects_title': 'Projects',
-        'health_care_name': 'Health Care In Can Tho',
-        'health_care_description': 'A free mobile app delivering Lancaster University services, resources, and information - at your fingertips',
-        'technologies': 'Technologies'
+        'certifications_title': 'Certifications',
+        'rookie_cert_name': 'Acknowledgement of completion: The Rookies Program',
     }
 }

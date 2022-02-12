@@ -1,36 +1,70 @@
-import React from 'react';
-import { Image, Flex, Heading, Text } from '@chakra-ui/react';
-import useTrans from '../../pages/hooks/useTrans';
+import { Box, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
+import React from 'react'
 
-export default function ProjectCard({ img, name, description, technologies, imgRight = false, bgColor, nameColor, subColor, ...props }) {
-    const trans = useTrans();
+export default function ProjectCard({ titleColor, frameColor, subColor }) {
     return (
-        <Flex direction={imgRight ? 'row-reverse' : 'row'} alignItems="center" w="80%" my={7} {...props}>
-            <Image src={img} borderRadius="16px" h="250px" objectFit="fill " alt="QF formula" />
-            <Flex direction="column" align="flex-start" bgColor={bgColor} borderRadius={imgRight ? '20px 0 0 20px' : '0 20px 20px 0'} px={7} py={7}>
-                <Heading as="h4" fontSize="xl" alignSelf="left" mb={2} color={nameColor}>{name}</Heading>
-                <Text
-                    fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
-                    color="#DBDBDB"
-                    py={1}
-                    lineHeight={{ base: 'base', lg: 'tall', xl: 'tall' }}
-                    textAlign='left'
-                    color={subColor}
-                >
-                    {description}
-                </Text>
-                <Text
-                    fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
-                    color="#DBDBDB"
-                    py={1}
-                    lineHeight={{ base: 'base', lg: 'tall', xl: 'tall' }}
-                    textAlign='left'
-                    color={subColor}
-                >
-                    <span><strong>{trans.about.technologies}:</strong></span> <span>{technologies}</span>
-                </Text>
-            </Flex>
-        </Flex>
+        <Box w="100%" mb={20}>
+            <Stack spacing="0" direction="column" position={{ base: 'static', md: 'relative' }}>
+                <Box w=
+                    {{ base: '100%', md: '50%' }}
 
+                    px={{ base: '3', md: '5', lg: '8', xl: '10' }}
+                // py={0}
+                // py={{ base: '3', md: '5', lg: '8', xl: '10' }}
+                >
+                    <Box
+                        px={{ base: '3', md: '7', lg: '7', xl: '7' }}
+                        py={{ base: '3', md: '7', lg: '7', xl: '7' }}
+                        bg={frameColor}
+                        borderRadius="4px"
+                    >
+                        <Image
+                            src="/images/projects/qf.png"
+                            borderRadius="8px"
+                            w="100%"
+                            objectFit="fill "
+                            alt="QF formula"
+                        />
+                    </Box>
+
+                </Box>
+                <Flex
+                    display="column"
+                    justify="space-between"
+                    borderTop={{ base: 'none', md: `1px solid ${frameColor}` }}
+                    borderBottom={{ base: `1px solid ${frameColor}`, md: 'none' }}
+                    align="flex-start"
+                    w={{ base: '100%', md: '45%' }}
+                    boxSizing="border-box"
+                    // bg="#958595"
+                    h={{ base: '200px', md: '100%' }}
+                    position={{ base: 'static', md: 'absolute' }}
+                    left="50%"
+                    top={0}
+                    px={{ base: '5', md: '0', lg: '0', xl: '0' }}
+                    py={{ base: '3', md: '5', lg: '8', xl: '10' }}
+                >
+                    <Heading as="h2" fontSize={{ base: 'xl', md: '2xl', lg: '2xl', xl: '3xl' }} alignSelf="left" mb={2} color={titleColor}>
+                        Health Care In Can Tho App
+                    </Heading>
+                    <Text
+                        fontSize={{ base: 'xs', lg: 'md', xl: 'lg' }}
+                        color="#DBDBDB"
+                        py={1}
+                        lineHeight={{ base: 'base', lg: 'tall', xl: 'tall' }}
+                        textAlign='left'
+                        lineHeight="tall"
+                        color={subColor}
+                    >
+                        <span><strong>Description: </strong></span>
+                        A free mobile app delivering Lancaster University services, resources, and information - at your fingertips
+                    </Text>
+                    <Text fontSize={{ base: 'xs', lg: 'md', xl: 'lg' }} lineHeight="tall">
+                        <span><strong>Technologies: </strong></span>
+                        Flutter framework, Dart language, Firebase
+                    </Text>
+                </Flex>
+            </Stack>
+        </Box>
     )
 }

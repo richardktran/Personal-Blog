@@ -42,7 +42,7 @@ export default function Navbar({ path, toggleShowInfo }) {
     }
 
     const changeLang = (lang) => {
-        router.push('/', '/', { locale: lang })
+        router.push(path, path, { locale: lang })
         if (cookie.NEXT_LOCALE !== lang) {
             setCookie("NEXT_LOCALE", lang, { path: "/" });
         }

@@ -27,7 +27,7 @@ export default {
         'nashtech_description3': "- Cộng tác với trưởng nhóm để xác định và cải thiện quy trình làm việc của nhóm, giúp giảm các lỗi liên quan đến cấu hình hoặc xung đột.",
 
         'education_title': "Học vấn",
-        'university': "Đại học Cần Thơ",
+        'university': "Trường Đại học Cần Thơ",
         'degree_grade': "Xếp loại",
         'excellent': "Xuất sắc",
         'degree': "Bằng kỹ sư",
@@ -41,10 +41,8 @@ export default {
         'knowledge2': 'Hiểu biết tốt về thiết kế phần mềm, thiết kế cơ sở dữ liệu, RestfulAPI,...',
         'knowledge3': 'Quản lý thời gian tốt, lập kế hoạch hành động, kỹ năng làm việc nhóm và giải quyết vấn đề...',
 
-        'projects_title': 'Các dự án',
-        'health_care_name': 'Health Care In Can Tho',
-        'health_care_description': 'Một ứng dụng di động miễn phí cung cấp các dịch vụ, tài nguyên và thông tin của Đại học Lancaster - trong tầm tay bạn',
-        'technologies': 'Công nghệ'
+        'certifications_title': 'Các chứng chỉ',
+        'rookie_cert_name': 'Chứng nhận hoàn thành: The Rookies Program',
     }
 
 
