@@ -3,22 +3,30 @@ import { Box, Text, Heading, Flex, HStack, useColorModeValue } from "@chakra-ui/
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa";
 import useTrans from '../../pages/hooks/useTrans';
+import { motion } from "framer-motion"
 
-export default function BlogItem({ href }) {
+const MotionBox = motion(Box);
+
+export default function BlogItem({ href, ...props }) {
     const trans = useTrans()
     const bg = useColorModeValue('#FFFFFF', '#171717')
     const textColor = useColorModeValue('#003049', '#ffffff')
     const subTextColor = useColorModeValue('#6B6B6B', '#E6E6E6')
     const tagColor = useColorModeValue('#22B07D', '#22B07D')
 
+
     return (
-        <Box
+        <MotionBox
+            whileHover={{ scale: 1.04 }}
+            // animate={{ x: [null, 100, 0] }}
+            // transition={{ duration: 1, times: [0, 0.2, 1] }}
             bg={bg}
             w="75%"
             borderRadius={12}
             px={{ base: '6', lg: '8', xl: '10' }}
             py={{ base: '6', lg: '7', xl: '7' }}
             my={3}
+            {...props}
         >
             <HStack className="tag" spacing={5}>
                 <Link href={href}>
@@ -59,6 +67,6 @@ export default function BlogItem({ href }) {
                     </a>
                 </Link>
             </Flex>
-        </Box>
+        </MotionBox>
     );
 }

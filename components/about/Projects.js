@@ -2,7 +2,9 @@ import React from 'react';
 import { Image, Flex, Heading, Text, useColorModeValue, Box, Stack, Spacer } from '@chakra-ui/react';
 import useTrans from '../../pages/hooks/useTrans';
 import ProjectCard from '../common/ProjectCard';
+import { motion } from 'framer-motion';
 
+const MotionFlex = motion(Flex)
 export default function Projects({ ...props }) {
     const trans = useTrans();
     const headingColor = useColorModeValue('#00AFB9', '#FF8700');
@@ -13,7 +15,7 @@ export default function Projects({ ...props }) {
 
 
     return (
-        <Flex direction="column" w="100%" alignItems="center" justifyItems="center" {...props}>
+        <MotionFlex direction="column" w="100%" alignItems="center" justifyItems="center" {...props}>
             <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" my={5}>
                 Projects
             </Heading>
@@ -27,6 +29,6 @@ export default function Projects({ ...props }) {
                 subColor={grayTextColor}
                 titleColor={stressTextColor}
             />
-        </Flex>
+        </MotionFlex>
     )
 }

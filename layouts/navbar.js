@@ -23,9 +23,13 @@ import { IoMdUndo } from 'react-icons/io';
 import useTrans from '../pages/hooks/useTrans'
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
+import { motion } from 'framer-motion';
+import ToggleColorMode from '../components/common/ToggleColorMode';
 
 
 
+
+const MotionButton = motion(Button);
 
 
 export default function Navbar({ path, toggleShowInfo }) {
@@ -35,7 +39,7 @@ export default function Navbar({ path, toggleShowInfo }) {
 
     const { locale } = useRouter()
 
-    const { toggleColorMode } = useColorMode()
+
 
     const setShowInfo = () => {
         toggleShowInfo();
@@ -99,13 +103,7 @@ export default function Navbar({ path, toggleShowInfo }) {
                             {trans.navbar.about_me}
                         </LinkItem>
                     </Flex>
-                    <IconButton
-                        aria-label="Toggle theme"
-                        colorScheme={useColorModeValue('purple', 'orange')}
-                        icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
-                        onClick={toggleColorMode}
-
-                    />
+                    <ToggleColorMode />
 
                     <Flex d={{ base: 'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }} mx={3} >
                         <Menu >
@@ -163,7 +161,8 @@ const LinkItem = ({ href, children, path }) => {
     const active = path === href;
     return (
         <NextLink href={href} passHref>
-            <Button
+            <MotionButton
+                whileTap={{ scale: 0.7 }}
                 _focus={{
                     outline: 'none',
                 }}
@@ -178,7 +177,7 @@ const LinkItem = ({ href, children, path }) => {
                 ml={2}
             >
                 <Heading fontSize='md' fontWeight='bold'>{children}</Heading>
-            </Button>
-        </NextLink>
+            </MotionButton>
+        </NextLink >
     );
 }

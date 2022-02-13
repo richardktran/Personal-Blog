@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useMediaQuery } from '@chakra-ui/react'
 import ProfileSection from '../components/info/ProfileSection';
 import Navbar from './navbar';
+import { motion } from 'framer-motion';
 
 export default function Layout({ children, router }) {
 

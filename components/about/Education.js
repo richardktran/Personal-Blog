@@ -3,7 +3,26 @@ import { Box, Flex, Heading, HStack, Image, Text, useColorModeValue, VStack } fr
 import { Icon } from '@iconify/react';
 import Timeline from '../common/Timeline';
 import useTrans from '../../pages/hooks/useTrans';
+import { motion } from 'framer-motion';
 
+const MotionFlex = motion(Flex)
+const MotionHStack = motion(HStack)
+const listEffect = {
+    visible: {
+        opacity: 1,
+    },
+    hidden: {
+        opacity: 0,
+    },
+}
+const leftItemEffect = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -100 },
+}
+const rightItemEffect = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: 100 },
+}
 export default function Education({ ...props }) {
     const trans = useTrans();
     const headingColor = useColorModeValue('#00AFB9', '#FF8700');
@@ -15,13 +34,19 @@ export default function Education({ ...props }) {
     const whiteTextColor = "#ffffff"
 
     return (
-        <Flex direction="column" alignSelf="center" alignItems="center"  {...props}>
+        <MotionFlex direction="column" alignSelf="center" alignItems="center"  {...props}>
             <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" >
                 {trans.about.education_title}
             </Heading>
             <Flex direction="column" align="center" h="100%" minW="100%" my={5}>
-                <HStack alignItems="flex-start" spacing={{ base: '3', md: '5', lg: '3', xl: '10' }}>
-                    <HStack alignItems="center" spacing={5}>
+                <MotionHStack
+                    alignItems="flex-start"
+                    spacing={{ base: '3', md: '5', lg: '3', xl: '10' }}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={listEffect}
+                >
+                    <MotionHStack alignItems="center" spacing={5} variants={leftItemEffect}>
                         <Box boxSize="90px" pt={3}>
                             <Image src="/images/CTU_logo.png" alt="CTU logo" />
                         </Box>
@@ -35,14 +60,14 @@ export default function Education({ ...props }) {
                                 <nobr><Text textAlign="right" opacity="90%">2018 - 2022</Text></nobr>
                             </Flex>
                         </VStack>
-                    </HStack>
+                    </MotionHStack>
 
                     <Timeline
                         bg={timelineColor}
                         icon={<Icon icon="cil:education" height="40" color={iconTimelineColor} />}
                     />
 
-                    <HStack>
+                    <MotionHStack variants={rightItemEffect}>
                         <VStack>
                             <Flex direction="column" color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8} px={5} py={3}>
                                 <nobr><Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.excellent}</Text></nobr>
@@ -51,11 +76,11 @@ export default function Education({ ...props }) {
                         </VStack>
                         {/* <Box boxSize="90px">
                         </Box> */}
-                    </HStack>
+                    </MotionHStack>
 
 
-                </HStack>
+                </MotionHStack>
             </Flex>
-        </Flex >
+        </MotionFlex >
     )
 }

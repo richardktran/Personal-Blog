@@ -7,6 +7,7 @@ import Projects from '../components/about/Projects';
 import Skill from '../components/about/Skill';
 import Summary from '../components/about/summary';
 import WorkExperience from '../components/about/WorkExperience';
+import { motion } from 'framer-motion';
 
 
 export default function About() {
@@ -22,11 +23,16 @@ export default function About() {
                 mb={10}
             >
                 <Summary mb={50} px={12} />
-                <WorkExperience my={50} />
-                <Education my={50} />
-                <Skill />
-                <Certifications px={12} />
-                <Projects />
+                <WorkExperience my={50}
+                />
+                <Education my={50}
+                />
+                <Skill
+                />
+                <Certifications px={12}
+                />
+                <Projects
+                />
             </Flex>
         </>
     )

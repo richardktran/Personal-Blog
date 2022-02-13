@@ -1,12 +1,46 @@
 import React from 'react';
 import { Image, Flex, Heading, Text } from '@chakra-ui/react';
 import useTrans from '../../pages/hooks/useTrans';
+import { motion } from 'framer-motion';
+
+const MotionFlex = motion(Flex)
+const MotionImage = motion(Image)
+const listEffect = {
+    visible: {
+        opacity: 1,
+        transition: {
+            when: 'beforeChildren',
+            staggerChildren: 0.2,
+        }
+    },
+    hidden: {
+        opacity: 0,
+        transition: {
+            when: 'afterChildren',
+        }
+    },
+}
+const itemEffect = {
+    visible: { opacity: 1, width: null },
+    hidden: { opacity: 0, width: 0 },
+}
 
 export default function CertificateCard({ img, name, company, dateOfIssue, imgRight = false, bgColor, nameColor, subColor, ...props }) {
     const trans = useTrans();
     return (
-        <Flex direction={{ base: 'column', md: (imgRight ? 'row-reverse' : 'row') }} alignItems="center" w={{ base: '95%', md: '95%', lg: '90%', xl: '85%' }} my={7} {...props}>
-            <Image
+        <MotionFlex
+            direction={{ base: 'column', md: (imgRight ? 'row-reverse' : 'row') }}
+            alignItems="center" w={{ base: '95%', md: '95%', lg: '90%', xl: '85%' }}
+            my={7}
+            variants={listEffect}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            {...props}
+        >
+            <MotionImage
+                variants={itemEffect}
+                whileHover={{ scale: 1.2 }}
                 src={img}
                 borderRadius="16px"
                 w={{ base: '90%', md: '50%', lg: '45%', xl: '40%' }}
@@ -14,7 +48,8 @@ export default function CertificateCard({ img, name, company, dateOfIssue, imgRi
                 objectFit="fill "
                 alt="QF formula"
             />
-            <Flex
+            <MotionFlex
+                variants={itemEffect}
                 maxH="150px"
                 direction="column"
                 align="flex-start"
@@ -46,8 +81,8 @@ export default function CertificateCard({ img, name, company, dateOfIssue, imgRi
                 >
                     {dateOfIssue}
                 </Text>
-            </Flex>
-        </Flex>
+            </MotionFlex>
+        </MotionFlex>
 
     )
 }
