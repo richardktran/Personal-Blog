@@ -5,7 +5,7 @@ import Certifications from '../components/about/Certifications';
 import Education from '../components/about/Education';
 import Projects from '../components/about/Projects';
 import Skill from '../components/about/Skill';
-import Summary from '../components/about/summary';
+import Summary from '../components/about/Summary';
 import WorkExperience from '../components/about/WorkExperience';
 import { motion } from 'framer-motion';
 
