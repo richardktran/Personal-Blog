@@ -11,6 +11,7 @@ const styles = {
     global: {
         "html, body": {
             height: '100%',
+            scrollBehavior: 'smooth'
         },
         "p": {
             fontWeight: 'normal',

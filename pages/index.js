@@ -26,26 +26,41 @@ const itemEffect = {
   hidden: { opacity: 0, x: -100 },
 }
 
+const variants = {
+  hidden: { opacity: 0, x: 0, y: 20 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: -0, y: 20 }
+}
+
 export default function Home() {
   return (
     <>
       <Head>
         <title>Richard Annowit - Blog</title>
       </Head>
-      <MotionFlex
+      <motion.div
         initial="hidden"
-        animate="visible"
-        variants={listEffect}
-        direction="column"
-        alignItems="center"
-        pb={10}
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ duration: 0.4, type: 'easeInOut' }}
+        style={{ position: 'relative' }}
       >
-        <BlogItem href="#" variants={itemEffect} />
-        <BlogItem href="#" variants={itemEffect} />
-        <BlogItem href="#" variants={itemEffect} />
-        <BlogItem href="#" variants={itemEffect} />
+        <MotionFlex
+          initial="hidden"
+          animate="visible"
+          variants={listEffect}
+          direction="column"
+          alignItems="center"
+          pb={10}
+        >
+          <BlogItem href="#" variants={itemEffect} />
+          <BlogItem href="#" variants={itemEffect} />
+          <BlogItem href="#" variants={itemEffect} />
+          <BlogItem href="#" variants={itemEffect} />
 
-      </MotionFlex>
+        </MotionFlex>
+      </motion.div>
     </>
   )
 }
