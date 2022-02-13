@@ -20,7 +20,7 @@ import NextLink from 'next/link'
 import { ChevronDownIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { IoMdUndo } from 'react-icons/io';
-import useTrans from '../pages/hooks/useTrans'
+import useTrans from '../hooks/useTrans'
 import { useRouter } from 'next/router';
 import { useCookies } from 'react-cookie';
 import { motion } from 'framer-motion';

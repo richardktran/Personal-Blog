@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Flex, Heading, Text } from '@chakra-ui/react';
-import useTrans from '../../pages/hooks/useTrans';
+import useTrans from '../../hooks/useTrans';
 import { motion } from 'framer-motion';
 
 const MotionFlex = motion(Flex)
@@ -63,7 +63,6 @@ export default function CertificateCard({ img, name, company, dateOfIssue, imgRi
                 </Heading>
                 <Text
                     fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
-                    color="#DBDBDB"
                     py={1}
                     lineHeight={{ base: 'base', lg: 'tall', xl: 'tall' }}
                     textAlign='left'
@@ -73,7 +72,6 @@ export default function CertificateCard({ img, name, company, dateOfIssue, imgRi
                 </Text>
                 <Text
                     fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
-                    color="#DBDBDB"
                     py={1}
                     lineHeight={{ base: 'base', lg: 'tall', xl: 'tall' }}
                     textAlign='left'

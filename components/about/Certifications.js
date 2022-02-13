@@ -1,8 +1,8 @@
 import React from 'react';
 import { Image, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import CertificateCard from '../common/CertificateCard';
-import useTrans from '../../pages/hooks/useTrans';
 import { motion } from 'framer-motion';
+import useTrans from '../../hooks/useTrans';
 
 const MotionFlex = motion(Flex)
 export default function Certifications({ ...props }) {

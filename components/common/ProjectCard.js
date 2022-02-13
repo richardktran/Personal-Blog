@@ -87,11 +87,9 @@ export default function ProjectCard({ titleColor, frameColor, subColor }) {
                     </Heading>
                     <Text
                         fontSize={{ base: 'xs', lg: 'md', xl: 'md' }}
-                        color="#DBDBDB"
                         py={1}
                         lineHeight={{ base: 'base', lg: 'tall', xl: 'tall' }}
                         textAlign='left'
-                        lineHeight="tall"
                         color={subColor}
                     >
                         <span><strong>Description: </strong></span>

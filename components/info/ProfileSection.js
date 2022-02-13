@@ -4,7 +4,7 @@ import CardName from './CardName'
 import ProfileDetail from './ProfileDetails'
 import Social from './Social';
 import { CloseIcon } from '@chakra-ui/icons'
-import useTrans from '../../pages/hooks/useTrans';
+import useTrans from '../../hooks/useTrans';
 
 export default function ProfileSection({ closeInfo }) {
     const bg = useColorModeValue('#FFFFFF', '#171717')

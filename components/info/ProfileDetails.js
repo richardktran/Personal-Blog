@@ -1,6 +1,6 @@
 import { Box, Text, Flex, Spacer, HStack, useColorModeValue } from '@chakra-ui/react'
 import { FaBirthdayCake, FaLinkedinIn, FaGithub, FaExternalLinkAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import useTrans from '../../pages/hooks/useTrans';
+import useTrans from '../../hooks/useTrans';
 
 const ProfileDetail = ({ email, phone, birthDate }) => {
     const trans = useTrans();

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Flex, Heading, Text, useColorModeValue, Box, Stack, Spacer } from '@chakra-ui/react';
-import useTrans from '../../pages/hooks/useTrans';
+import useTrans from '../../hooks/useTrans';
 import ProjectCard from '../common/ProjectCard';
 import { motion } from 'framer-motion';
 

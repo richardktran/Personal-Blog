@@ -1,6 +1,6 @@
 import { Flex, Heading, HStack, ListItem, Stack, Text, UnorderedList, useColorModeValue, VStack } from '@chakra-ui/react';
 import React from 'react';
-import useTrans from '../../pages/hooks/useTrans';
+import useTrans from '../../hooks/useTrans';
 import { motion } from 'framer-motion';
 
 const MotionFlex = motion(Flex)
@@ -63,7 +63,7 @@ export default function Skill({ ...props }) {
                     <Heading as="h6" fontSize="md" textTransform='uppercase' fontWeight="bold" color={stressTextColor} alignSelf="center">
                         {trans.about.framework_platform}:
                     </Heading>
-                    <UnorderedList color="#F5F5F5" color={grayTextColor} fontWeight="normal" ml={7} mt={3}>
+                    <UnorderedList color={grayTextColor} fontWeight="normal" ml={7} mt={3}>
                         <ListItem>Laravel</ListItem>
                         <ListItem>NextJS/ReactJS</ListItem>
                         <ListItem>NodeJS</ListItem>

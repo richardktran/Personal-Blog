@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Flex, Heading, HStack, Image, Text, useColorModeValue, VStack } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 import Timeline from '../common/Timeline';
-import useTrans from '../../pages/hooks/useTrans';
+import useTrans from '../../hooks/useTrans';
 import { motion } from 'framer-motion';
 
 const MotionFlex = motion(Flex)

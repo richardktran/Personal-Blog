@@ -1,6 +1,6 @@
 import { Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
-import useTrans from '../../pages/hooks/useTrans';
+import useTrans from '../../hooks/useTrans';
 import { motion } from 'framer-motion';
 
 const MotionFlex = motion(Flex);

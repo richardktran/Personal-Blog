@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Text, Heading, Flex, HStack, useColorModeValue } from "@chakra-ui/react";
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa";
-import useTrans from '../../pages/hooks/useTrans';
+import useTrans from '../../hooks/useTrans';
 import { motion } from "framer-motion"
 
 const MotionBox = motion(Box);
