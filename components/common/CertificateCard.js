@@ -51,6 +51,7 @@ export default function CertificateCard({ img, name, company, dateOfIssue, imgRi
             <MotionFlex
                 variants={itemEffect}
                 maxH="150px"
+                minW="40%"
                 direction="column"
                 align="flex-start"
                 bgColor={bgColor}

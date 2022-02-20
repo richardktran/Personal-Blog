@@ -20,11 +20,19 @@ export default function Projects({ ...props }) {
                 Projects
             </Heading>
             <ProjectCard
+                projectName="Personal web blog"
+                description="This project is build with share experience purposes and this is also the cv online for me"
+                technologies="ReactJS/NextJS, Laravel"
+                imgUrl="/images/projects/blog.png"
                 frameColor={frameColor}
                 subColor={grayTextColor}
                 titleColor={stressTextColor}
             />
             <ProjectCard
+                projectName="Personal web blog"
+                description="This project is build with share experience purposes and this is also the cv online for me"
+                technologies="ReactJS/NextJS, Laravel"
+                imgUrl="/images/projects/blog.png"
                 frameColor={frameColor}
                 subColor={grayTextColor}
                 titleColor={stressTextColor}

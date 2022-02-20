@@ -43,6 +43,10 @@ export default {
 
         'certifications_title': 'Các chứng chỉ',
         'rookie_cert_name': 'Chứng nhận hoàn thành: The Rookies Program',
+        'olympic_cert_name': 'Chứng nhận tham gia Olympic tin học sinh viên Việt Nam 2020',
+        'vaip': 'Hội Tin học Việt Nam',
+        'snackdown2019': 'Chứng nhận tham gia cuộc thi lập trình Snackdown 2019',
+        'snackdown2017': 'Chứng nhận tham gia cuộc thi lập trình Snackdown 2017',
     }
 
 

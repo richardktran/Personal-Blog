@@ -22,7 +22,7 @@ export default function Certifications({ ...props }) {
                 bgColor={bgColor}
                 nameColor={stressTextColor}
                 subColor={grayTextColor}
-                img="/images/certifications/HashCode2020.png"
+                img="/images/certifications/nashtech.png"
                 name={trans.about.rookie_cert_name}
                 company="NashTech"
                 dateOfIssue="15 Sep, 2021"
@@ -33,10 +33,10 @@ export default function Certifications({ ...props }) {
                 nameColor={stressTextColor}
                 subColor={grayTextColor}
                 imgRight
-                img="/images/certifications/HashCode2020.png"
-                name={trans.about.rookie_cert_name}
-                company="NashTech"
-                dateOfIssue="15 Sep, 2021"
+                img="/images/certifications/olympic.jpg"
+                name={trans.about.olympic_cert_name}
+                company={trans.about.vaip}
+                dateOfIssue="11 Dec, 2020"
             />
 
             <CertificateCard
@@ -44,9 +44,39 @@ export default function Certifications({ ...props }) {
                 nameColor={stressTextColor}
                 subColor={grayTextColor}
                 img="/images/certifications/HashCode2020.png"
-                name={trans.about.rookie_cert_name}
-                company="NashTech"
-                dateOfIssue="15 Sep, 2021"
+                name="Google Hash Code 2020"
+                company="Google Inc."
+                dateOfIssue="10 Feb, 2020"
+            />
+            <CertificateCard
+                bgColor={bgColor}
+                nameColor={stressTextColor}
+                subColor={grayTextColor}
+                imgRight
+                img="/images/certifications/CodeJam2019.png"
+                name="Google Code Jam"
+                company="Google Inc."
+                dateOfIssue="05 Apr, 2019"
+            />
+
+            <CertificateCard
+                bgColor={bgColor}
+                nameColor={stressTextColor}
+                subColor={grayTextColor}
+                img="/images/certifications/snackdown2019.png"
+                name={trans.about.snackdown2019}
+                company="CodeChef"
+                dateOfIssue="18 Mar, 2019"
+            />
+            <CertificateCard
+                imgRight
+                bgColor={bgColor}
+                nameColor={stressTextColor}
+                subColor={grayTextColor}
+                img="/images/certifications/snackdown2017.png"
+                name={trans.about.snackdown2017}
+                company="CodeChef"
+                dateOfIssue="28 Jun, 2019"
             />
         </MotionFlex>
     )

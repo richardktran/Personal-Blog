@@ -43,5 +43,9 @@ export default {
 
         'certifications_title': 'Certifications',
         'rookie_cert_name': 'Acknowledgement of completion: The Rookies Program',
+        'olympic_cert_name': 'IT olympian for students in Vietnam Certificate of Paticipation 2020',
+        'vaip': 'Vietnam Association for Information Processing',
+        'snackdown2019': 'Snackdown Certificates Participation 2019',
+        'snackdown2017': 'Snackdown Certificates Participation 2017',
     }
 }

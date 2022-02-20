@@ -31,7 +31,7 @@ const rightItemEffect = {
 }
 
 
-export default function ProjectCard({ titleColor, frameColor, subColor }) {
+export default function ProjectCard({ projectName, description, technologies, imgUrl, titleColor, frameColor, subColor }) {
     return (
         <Box w="100%" mb={20}>
             <MotionStack
@@ -56,11 +56,11 @@ export default function ProjectCard({ titleColor, frameColor, subColor }) {
                     >
                         <MotionImage
                             whileHover={{ scale: 1.2 }}
-                            src="/images/projects/qf.png"
+                            src={imgUrl}
                             borderRadius="8px"
                             w="100%"
                             objectFit="fill "
-                            alt="QF formula"
+                            alt={projectName}
                         />
                     </Box>
 
@@ -83,7 +83,7 @@ export default function ProjectCard({ titleColor, frameColor, subColor }) {
                     py={{ base: '3', md: '5', lg: '8', xl: '10' }}
                 >
                     <Heading as="h2" fontSize={{ base: 'lg', md: '1xl', lg: '1xl', xl: '2xl' }} alignSelf="left" mb={2} color={titleColor}>
-                        Health Care In Can Tho App
+                        {projectName}
                     </Heading>
                     <Text
                         fontSize={{ base: 'xs', lg: 'md', xl: 'md' }}
@@ -93,11 +93,11 @@ export default function ProjectCard({ titleColor, frameColor, subColor }) {
                         color={subColor}
                     >
                         <span><strong>Description: </strong></span>
-                        A free mobile app delivering Lancaster University services, resources, and information - at your fingertips
+                        {description}
                     </Text>
                     <Text fontSize={{ base: 'xs', lg: 'md', xl: 'md' }} lineHeight="tall">
                         <span><strong>Technologies: </strong></span>
-                        Flutter framework, Dart language, Firebase
+                        {technologies}
                     </Text>
                 </MotionFlex>
             </MotionStack>

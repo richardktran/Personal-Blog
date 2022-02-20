@@ -48,7 +48,7 @@ Các project:
 Các chứng chỉ:
 
 - Acknowledgement of completion: The Rookies Program - 15/9/2021
-- Olympic tin học sinh viên việt nam 2020 - 11/12/2020
+- Olympic tin học sinh viên việt nam 2020 - 11/12/2020 - IT olympian for students in Vietnam Certificate of Paticipation
 - Google Hash Code 2020 - 02/2020
 - Perform Foundational Data, ML, and AI Tasks in Google Cloud - 6/8/2020
 - Google Code Jam - 05/04/2019
