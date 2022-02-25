@@ -8,7 +8,7 @@ export default {
     profile: {
         'name': 'Tran Dang Khoa',
         'specialist': 'Software Engineering',
-        'short_description': 'I’m a oftware engineer with 5+ years experience in commercial application development. Eager to join Cyclone Inc. to build innovative and cutting edge business solutions for the impressive suite of clients within its global reach.',
+        'short_description': 'I\'m a software engineer with strongly passionate about lines of code. Despite this, difficulties piling up difficulties, particularly in the self-taught process. As a result, this blog is born with the mission of documenting my difficulties and sharing my experience, knowledge, and lessons learned with others who face similar difficulties.',
         'bỉthdate': '01 May, 2000',
         'profile': 'Profile'
     },
@@ -17,8 +17,8 @@ export default {
     },
     about: {
         'summary_title': 'summary',
-        'summary1': "I'm a final year student at Can Tho University with 1 year of experience in Web Development, with good knowledge of Data Structure, Algorithm, a little about Machine Learning. I was attended ACM/ICPC in Ha Noi 2018",
-        'summary2': "Learning new languages and technologies is what I am passionate about. I am considered a team-player because I like to help other and tend to work well within the group. I can also do some mentoring tasks and do code reviews for other team members.",
+        'summary1': "My short-term goal is to work in a dynamic, laid-back, and creative environment where I can fully develop my learning spirit and creativity. As a result, I'll be able to achieve my long-term objectives more effectively.",
+        'summary2': "My long-term goal is to apply the knowledge which I accumulate for a long time to contribute to the important objectives of my company. I want to become a valuable, a great influence person not only for my company but also for a lot of people around me, for society, and also for myself.",
 
         'work_experience_title': "work experience",
         'position': "Internship",

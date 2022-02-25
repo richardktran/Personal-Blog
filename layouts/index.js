@@ -38,6 +38,7 @@ export default function Layout({ children, router }) {
                 pl={{ base: '0', md: '0', lg: '25%', xl: '25%' }}
                 pt='6rem'
                 w='100%'
+                minH='100vh'
                 bg={useColorModeValue('#F5F5F5', '#1E1E1E')}
                 direction='column'
             >

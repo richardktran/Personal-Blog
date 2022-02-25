@@ -54,7 +54,7 @@ export default function Certifications({ ...props }) {
                 subColor={grayTextColor}
                 imgRight
                 img="/images/certifications/CodeJam2019.png"
-                name="Google Code Jam"
+                name="Google Code Jam 2019"
                 company="Google Inc."
                 dateOfIssue="05 Apr, 2019"
             />

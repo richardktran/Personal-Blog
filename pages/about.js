@@ -38,7 +38,7 @@ export default function About() {
                 <Summary mb={50} px={12} />
                 <WorkExperience my={50} />
                 <Education my={50} />
-                {/* <Skill /> */}
+                <Skill />
                 <Certifications px={12} />
                 <Projects />
             </MotionFlex>

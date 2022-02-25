@@ -8,7 +8,7 @@ export default {
     profile: {
         'name': 'Trần Đăng Khoa',
         'specialist': 'Kỹ sư phần mềm',
-        'short_description': 'Tôi là kỹ sư phần mềm với hơn 5 năm kinh nghiệm trong lĩnh vực phát triển ứng dụng thương mại. Háo hức tham gia Cyclone Inc. để xây dựng các giải pháp kinh doanh tiên tiến và sáng tạo cho nhóm khách hàng ấn tượng trong phạm vi toàn cầu của mình.',
+        'short_description': 'Tôi là một kỹ sư phần mềm với một niềm đam mê mảnh liệt với các dòng code. Tuy đam mê là vậy nhưng khó khăn cũng chồng chất, nhất là trong quá trình tự học. Do đó blog này ra đời là để note lại những khó khăn mình gặp phải cũng như là để chia sẻ những kinh nghiệm, trải nghiệm và kiến thức mà mình học được cho mọi người cùng... khó khăn chung với mình. :)',
         'bỉthdate': '01-05-2000',
         'profile': 'Thông tin'
     },
@@ -17,8 +17,8 @@ export default {
     },
     about: {
         'summary_title': 'Tóm tắt',
-        'summary1': "Tôi là sinh viên năm cuối trường Đại học Cần Thơ với 1 năm kinh nghiệm về Phát triển web, có kiến thức tốt về Cấu trúc dữ liệu, Thuật toán, một chút về Machine Learning. Tôi đã tham dự ACM / ICPC tại Hà Nội 2018",
-        'summary2': "Học ngôn ngữ và công nghệ mới là điều tôi đam mê. Tôi được coi là một người chơi đồng đội vì tôi thích giúp đỡ người khác và có xu hướng làm việc tốt trong nhóm. Tôi cũng có thể thực hiện một số nhiệm vụ cố vấn và đánh giá mã cho các thành viên khác trong nhóm.",
+        'summary1': "Mục tiêu ngắn hạn và trước hết của tôi là được làm việc trong môi trường năng động, thoải mái và sáng tạo, có thể phát huy hết khả năng cũng như sự mày mò học hỏi của mình, nâng cao sự sáng tạo cho bản thân để phục vụ tốt hơn cho mục tiêu dài hạn của mình.",
+        'summary2': "Mục tiêu dài hạn của tôi là áp dụng được các kiến thức đã có để đóng góp vào những mục tiêu quan trọng của nơi tôi làm việc, trở thành một người có giá trị, có ảnh hưởng lớn không những cho sự phát triển của công ty mà còn cho cả những người xung quanh mình, cho xã hội và cho bản thân.",
 
         'work_experience_title': "Kinh nghiệm làm việc",
         'position': "Thực tập sinh",

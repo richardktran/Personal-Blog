@@ -42,7 +42,7 @@ export default function Skill({ ...props }) {
             </Heading>
             <Box
                 w="75%"
-                bg="#958575"
+                // bg="#958575"
                 mx="auto"
             >
                 <MotionStack

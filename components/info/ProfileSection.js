@@ -57,8 +57,8 @@ export default function ProfileSection({ closeInfo }) {
             </Flex>
 
             <Social
-                linkedinUrl="https://www.linkedin.com/in/richardannowit/"
-                githubUrl="https://github.com/richardannowit"
+                linkedinUrl="https://www.linkedin.com/in/richardktrandev/"
+                githubUrl="https://github.com/richardktran"
             />
         </Box>
     );

@@ -54,10 +54,10 @@ export default function Home() {
           alignItems="center"
           pb={10}
         >
-          <BlogItem href="#" variants={itemEffect} />
-          <BlogItem href="#" variants={itemEffect} />
-          <BlogItem href="#" variants={itemEffect} />
-          <BlogItem href="#" variants={itemEffect} />
+          <BlogItem href="posts/1" variants={itemEffect} />
+          <BlogItem href="posts/1" variants={itemEffect} />
+          <BlogItem href="posts/1" variants={itemEffect} />
+          <BlogItem href="posts/1" variants={itemEffect} />
 
         </MotionFlex>
       </motion.div>
