@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Richard Annowit - Blog</title>
+        <title>Richard K. Tran - Blog</title>
       </Head>
       <motion.div
         initial="hidden"

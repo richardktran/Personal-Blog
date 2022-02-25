@@ -21,7 +21,7 @@ export default function About() {
         <>
 
             <Head>
-                <title>Richard Annowit - About</title>
+                <title>Richard K. Tran - About</title>
             </Head>
             <MotionFlex
                 id="main_about"
