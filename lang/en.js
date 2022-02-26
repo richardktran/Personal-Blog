@@ -33,6 +33,7 @@ export default {
         'excellent': "Excellent",
         'degree': "Engineer Degree",
         'specialist': 'Software Engineering',
+        'scholarship': 'Achieve CTU Scholarship every year (2018-2021)',
 
         'skill_title': 'skills',
         'programming_language': "Programming Language",

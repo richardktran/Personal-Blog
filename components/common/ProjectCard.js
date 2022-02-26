@@ -33,12 +33,12 @@ const rightItemEffect = {
 
 export default function ProjectCard({ projectName, description, technologies, imgUrl, titleColor, frameColor, subColor }) {
     return (
-        <Box w="100%" mb={20}>
+        <Box w="100%" mb={10}>
             <MotionStack
                 variants={listEffect}
                 initial="hidden"
                 whileInView="visible"
-                // viewport={{ once: true }}
+                viewport={{ once: true }}
                 spacing="0"
                 direction="column"
                 position={{ base: 'static', md: 'relative' }}
@@ -71,17 +71,22 @@ export default function ProjectCard({ projectName, description, technologies, im
                     justify="space-between"
                     borderTop={{ base: 'none', md: `1px solid ${frameColor}` }}
                     borderBottom={{ base: `1px solid ${frameColor}`, md: 'none' }}
-                    align="flex-start"
+                    // align="flex-start"
                     w={{ base: '100%', md: '45%' }}
                     boxSizing="border-box"
-                    h={{ base: '200px', md: '100%' }}
+                    // h={{ base: '200px', md: '100%' }}
                     position={{ base: 'static', md: 'absolute' }}
                     left="50%"
                     top={0}
                     px={{ base: '5', md: '0', lg: '0', xl: '0' }}
                     py={{ base: '3', md: '5', lg: '8', xl: '10' }}
                 >
-                    <Heading as="h2" fontSize={{ base: 'lg', md: '1xl', lg: '1xl', xl: '2xl' }} alignSelf="left" mb={2} color={titleColor}>
+                    <Heading
+                        as="h2"
+                        fontSize={{ base: 'lg', md: '1xl', lg: '1xl', xl: '2xl' }}
+                        mb={2}
+                        color={titleColor}
+                    >
                         {projectName}
                     </Heading>
                     <Text

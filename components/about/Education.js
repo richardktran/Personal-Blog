@@ -35,12 +35,13 @@ export default function Education({ ...props }) {
     const whiteTextColor = "#ffffff"
 
     return (
-        <Box w="90%" px="auto">
+        <Box w="90%" px={{ base: 3, md: 5, lg: 8 }}>
             <MotionFlex direction="column" alignSelf="center" alignItems="center"  {...props}>
                 <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" >
                     {trans.about.education_title}
                 </Heading>
                 <MotionGrid
+                    display={{ base: 'none', md: 'grid' }}
                     initial="hidden"
                     whileInView="visible"
                     variants={listEffect}
@@ -48,7 +49,6 @@ export default function Education({ ...props }) {
                     my={5}
                     templateRows='repeat(1, 1fr)'
                     templateColumns={{ base: 'repeat(5, 1fr)', lg: 'repeat(7, 1fr)' }}
-                    gap={2}
                 >
                     <MotionGrid display={{ base: 'none', lg: 'grid' }} colSpan={1} variants={leftItemEffect} justifySelf="end">
                         <Box boxSize="90px" pt={3}>
@@ -75,13 +75,45 @@ export default function Education({ ...props }) {
                     </MotionGridItem>
 
                     <MotionGridItem colSpan={2} variants={rightItemEffect}>
-                        <Flex direction="column" color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8} px={5} py={3}>
+                        <Flex direction="column" maxW="16em" px={5} py={3} color={whiteTextColor} align="left" bgColor={cardColor} borderRadius={8}>
                             <Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.good}</Text>
                             <Text><span><strong>GPA:</strong></span> 3.58/4</Text>
+                            <Text>Achieve CTU Scholarship every year (2018-2021)</Text>
                         </Flex>
                     </MotionGridItem>
 
                 </MotionGrid>
+
+                {/* Responsive */}
+                <Grid
+                    display={{ base: 'grid', md: 'none' }}
+                    templateRows='repeat(2, 1fr)'
+                    templateColumns='repeat(5, 1fr)'
+                    gap={2}
+                >
+                    <GridItem colSpan={1} rowSpan={1}>
+                        <Box boxSize="70px" pt={3}>
+                            <Image src="/images/CTU_logo.png" alt="CTU logo" />
+                        </Box>
+                    </GridItem>
+                    <GridItem colSpan={4} rowSpan={2} ml={2}>
+                        <Flex direction="column">
+                            <Heading as="h6" color={stressTextColor} fontSize={{ base: 'xl', md: 'lg', lg: 'xl', xl: '2xl' }} pt={3} >
+                                {trans.about.university}
+                            </Heading>
+                            <Flex direction="column" align="flex-start" color={grayTextColor}>
+                                <Text>{trans.about.specialist}</Text>
+                                <Text opacity="90%">2018 - 2022</Text>
+                            </Flex>
+                            <Flex direction="column" color={grayTextColor} mt={3}>
+                                <Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.good}</Text>
+                                <Text><span><strong>GPA:</strong></span> 3.58/4</Text>
+                                <Text>{trans.about.scholarship}</Text>
+                            </Flex>
+                        </Flex>
+                    </GridItem>
+
+                </Grid>
             </MotionFlex >
         </Box >
     )

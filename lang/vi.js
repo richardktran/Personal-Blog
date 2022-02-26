@@ -33,6 +33,7 @@ export default {
         'excellent': "Xuất sắc",
         'degree': "Bằng kỹ sư",
         'specialist': 'Kỹ thuật phần mềm',
+        'scholarship': 'Được nhận học bổng khuyến khích học tập của trường: 1 học bổng/năm (2018-2021)',
 
         'skill_title': 'Các kỹ năng',
         'programming_language': "Ngôn ngữ lập trình",

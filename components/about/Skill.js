@@ -36,13 +36,12 @@ export default function Skill({ ...props }) {
 
 
     return (
-        <MotionBox w={{ base: '90%', md: '90%', lg: '70%', xl: '70%' }} my={3}  {...props}>
+        <MotionBox w={{ base: '80%', md: '80%', lg: '70%', xl: '70%' }} my={3}  {...props}>
             <Heading as="h1" color={headingColor} textAlign="center" textTransform='uppercase' fontWeight="bold" my={5}>
                 {trans.about.skill_title}
             </Heading>
             <Box
-                w="90%"
-                mx="auto"
+                w='100%'
             >
                 <MotionGrid
                     templateRows='repeat(2, 1fr)'
@@ -53,12 +52,14 @@ export default function Skill({ ...props }) {
                     variants={listEffect}
                 >
                     <MotionGridItem colSpan={{ base: 4, md: 2 }} variants={leftItemEffect}>
-                        <Box
+                        <Flex
+                            direction="column"
                             bgColor={bgColor}
                             borderRadius={20}
-                            px={7} py={7}
+                            px={{ base: 3, md: 5, lg: 7, xl: 7 }}
+                            py={{ base: 5, md: 5, lg: 7, xl: 7 }}
                         >
-                            <Heading as="h6" color={stressTextColor} textTransform='uppercase' fontWeight="bold" fontSize="md">
+                            <Heading as="h6" alignSelf="center" color={stressTextColor} textTransform='uppercase' fontWeight="bold" fontSize="md">
                                 {trans.about.programming_language}:
                             </Heading>
                             <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
@@ -68,15 +69,17 @@ export default function Skill({ ...props }) {
                                 <ListItem>Dart</ListItem>
                                 <ListItem>C++</ListItem>
                             </UnorderedList>
-                        </Box>
+                        </Flex>
                     </MotionGridItem>
                     <MotionGridItem colSpan={{ base: 4, md: 2 }} variants={rightItemEffect}>
-                        <Box
+                        <Flex
+                            direction="column"
                             bgColor={bgColor}
                             borderRadius={20}
-                            px={7} py={7}
+                            px={{ base: 3, md: 5, lg: 7, xl: 7 }}
+                            py={{ base: 5, md: 5, lg: 7, xl: 7 }}
                         >
-                            <Heading as="h6" fontSize="md" textTransform='uppercase' fontWeight="bold" color={stressTextColor} >
+                            <Heading as="h6" alignSelf="center" fontSize="md" textTransform='uppercase' fontWeight="bold" color={stressTextColor} >
                                 {trans.about.framework_platform}:
                             </Heading>
                             <UnorderedList color={grayTextColor} fontWeight="normal" ml={7} mt={3}>
@@ -86,15 +89,17 @@ export default function Skill({ ...props }) {
                                 <ListItem>Flutter</ListItem>
                                 <ListItem>Firebase</ListItem>
                             </UnorderedList>
-                        </Box>
+                        </Flex>
                     </MotionGridItem>
                     <MotionGridItem colSpan={4} variants={bottomItemEffect}>
-                        <Box
+                        <Flex
+                            direction="column"
                             bgColor={bgColor}
                             borderRadius={20}
-                            px={7} py={7}
+                            px={{ base: 3, md: 5, lg: 7, xl: 7 }}
+                            py={{ base: 5, md: 5, lg: 7, xl: 7 }}
                         >
-                            <Heading as="h6" fontSize="lg" textTransform='uppercase' color={stressTextColor} fontWeight="bold">
+                            <Heading as="h6" alignSelf="center" fontSize="lg" textTransform='uppercase' color={stressTextColor} fontWeight="bold">
                                 {trans.about.knowledge}
                             </Heading>
                             <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
@@ -102,7 +107,7 @@ export default function Skill({ ...props }) {
                                 <ListItem>{trans.about.knowledge2}</ListItem>
                                 <ListItem>{trans.about.knowledge3}</ListItem>
                             </UnorderedList>
-                        </Box>
+                        </Flex>
                     </MotionGridItem>
                 </MotionGrid >
 

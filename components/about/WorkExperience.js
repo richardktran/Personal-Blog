@@ -44,12 +44,13 @@ export default function WorkExperience({ ...props }) {
         hidden: { opacity: 0, x: 50 },
     }
     return (
-        <Box w="90%" px={8}>
+        <Box w="90%" px={{ base: 3, md: 5, lg: 8 }}>
             <MotionFlex direction="column" alignSelf="center" alignItems="center" my={3}  {...props}>
-                <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" >
+                <Heading as="h1" fontSize={{ base: '2xl', md: '4xl' }} color={headingColor} textTransform='uppercase' fontWeight="bold" >
                     {trans.about.work_experience_title}
                 </Heading>
                 <MotionGrid
+                    display={{ base: 'none', md: 'grid' }}
                     initial="hidden"
                     whileInView="visible"
                     variants={listEffect}
@@ -57,7 +58,6 @@ export default function WorkExperience({ ...props }) {
                     my={5}
                     templateRows='repeat(1, 1fr)'
                     templateColumns={{ base: 'repeat(5, 1fr)', lg: 'repeat(7, 1fr)' }}
-                    gap={2}
                 >
                     <MotionGrid display={{ base: 'none', lg: 'grid' }} colSpan={1} variants={leftItemEffect} justifySelf="end">
                         <Box boxSize="90px" pt={3} display={{ base: 'none', lg: 'flex' }}>
@@ -92,10 +92,41 @@ export default function WorkExperience({ ...props }) {
                         </Flex>
                     </MotionGridItem>
                 </MotionGrid>
-            </MotionFlex>
-            <Flex>
 
-            </Flex>
+                {/* Responsive */}
+                <Grid
+                    display={{ base: 'grid', md: 'none' }}
+                    templateRows='repeat(2, 1fr)'
+                    templateColumns='repeat(5, 1fr)'
+                    gap={2}
+                >
+                    <GridItem colSpan={1} rowSpan={1}>
+                        <Box boxSize="70px" pt={3}>
+                            <Image src="/images/NashTech_logo.png" alt="NashTech Logo" />
+                        </Box>
+                    </GridItem>
+                    <GridItem colSpan={4} rowSpan={2} ml={2}>
+                        <Flex direction="column">
+                            <Heading as="h6" color={stressTextColor} fontSize={{ base: 'xl', md: 'lg', lg: 'xl', xl: '2xl' }} pt={3} >
+                                PHP Developer
+                            </Heading>
+                            <Flex direction="column" align="flex-start" color={grayTextColor}>
+                                <Text>NashTech · {trans.about.position}</Text>
+                                <Text opacity="90%">06/2021 - 09/2021</Text>
+                            </Flex>
+                            <Flex direction="column" color={grayTextColor} mt={3}>
+                                <Text as="p" fontSize="sm">{trans.about.nashtech_description1}</Text>
+                                <Text as="p" fontSize="sm">{trans.about.nashtech_description2}</Text>
+                                <Text as="p" fontSize="sm">
+                                    {trans.about.nashtech_description3}
+                                </Text>
+                            </Flex>
+                        </Flex>
+                    </GridItem>
+
+                </Grid>
+            </MotionFlex>
+
         </Box>
     );
 }
