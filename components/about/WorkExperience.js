@@ -41,7 +41,7 @@ export default function WorkExperience({ ...props }) {
     }
     const rightItemEffect = {
         visible: { opacity: 1, x: 0 },
-        hidden: { opacity: 0, x: 100 },
+        hidden: { opacity: 0, x: 50 },
     }
     return (
         <Box w="90%" px={8}>
@@ -75,14 +75,14 @@ export default function WorkExperience({ ...props }) {
                             </Flex>
                         </VStack>
                     </MotionGridItem>
-                    <MotionGridItem colSpan={1}>
+                    <MotionGridItem colSpan={1} variants={rightItemEffect}>
                         <Timeline
                             bg={timelineColor}
                             icon={<Icon icon="ps:work-case" height="30" color={iconTimelineColor} />}
                             width="130px"
                         />
                     </MotionGridItem>
-                    <MotionGridItem colSpan={2}>
+                    <MotionGridItem colSpan={2} variants={rightItemEffect}>
                         <Flex direction="column" maxW="16em" px={5} py={3} color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8}>
                             <Text as="p" fontSize="sm">{trans.about.nashtech_description1}</Text>
                             <Text as="p" fontSize="sm">{trans.about.nashtech_description2}</Text>

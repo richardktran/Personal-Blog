@@ -21,7 +21,7 @@ export default function Projects({ ...props }) {
             </Heading>
             <ProjectCard
                 projectName="Personal web blog"
-                description="This project is build with share experience purposes and this is also the cv online for me"
+                description="This project is built with share experience purposes and this is also the cv online for me"
                 technologies="ReactJS/NextJS, Laravel"
                 imgUrl="/images/projects/blog.png"
                 frameColor={frameColor}
@@ -30,7 +30,7 @@ export default function Projects({ ...props }) {
             />
             <ProjectCard
                 projectName="Personal web blog"
-                description="This project is build with share experience purposes and this is also the cv online for me"
+                description="This project is built with share experience purposes and this is also the cv online for me"
                 technologies="ReactJS/NextJS, Laravel"
                 imgUrl="/images/projects/blog.png"
                 frameColor={frameColor}

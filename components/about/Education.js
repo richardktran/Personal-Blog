@@ -22,7 +22,7 @@ const leftItemEffect = {
 }
 const rightItemEffect = {
     visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0, x: 50 },
 }
 export default function Education({ ...props }) {
     const trans = useTrans();
@@ -74,7 +74,7 @@ export default function Education({ ...props }) {
                         />
                     </MotionGridItem>
 
-                    <MotionGridItem colSpan={2}>
+                    <MotionGridItem colSpan={2} variants={rightItemEffect}>
                         <Flex direction="column" color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8} px={5} py={3}>
                             <Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.excellent}</Text>
                             <Text><span><strong>GPA:</strong></span> 3.6/4</Text>

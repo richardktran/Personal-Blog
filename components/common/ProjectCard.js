@@ -27,7 +27,7 @@ const leftItemEffect = {
 }
 const rightItemEffect = {
     visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0, x: 20 },
 }
 
 
@@ -38,7 +38,7 @@ export default function ProjectCard({ projectName, description, technologies, im
                 variants={listEffect}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
                 spacing="0"
                 direction="column"
                 position={{ base: 'static', md: 'relative' }}
@@ -74,7 +74,6 @@ export default function ProjectCard({ projectName, description, technologies, im
                     align="flex-start"
                     w={{ base: '100%', md: '45%' }}
                     boxSizing="border-box"
-                    // bg="#958595"
                     h={{ base: '200px', md: '100%' }}
                     position={{ base: 'static', md: 'absolute' }}
                     left="50%"

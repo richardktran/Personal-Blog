@@ -9,7 +9,7 @@ const MotionBox = motion(Box);
 
 export default function BlogItem({ href, ...props }) {
     const trans = useTrans()
-    const bg = useColorModeValue('#FFFFFF', '#171717')
+    const bg = useColorModeValue('#FFFFFF', '#171A1E')
     const textColor = useColorModeValue('#003049', '#ffffff')
     const subTextColor = useColorModeValue('#6B6B6B', '#E6E6E6')
     const tagColor = useColorModeValue('#22B07D', '#22B07D')

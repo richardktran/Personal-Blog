@@ -20,7 +20,7 @@ const leftItemEffect = {
 }
 const rightItemEffect = {
     visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0, x: 50 },
 }
 
 const bottomItemEffect = {
@@ -51,7 +51,6 @@ export default function Skill({ ...props }) {
                     initial="hidden"
                     whileInView="visible"
                     variants={listEffect}
-                    viewport={{ once: true }}
                 >
                     <MotionGridItem colSpan={{ base: 4, md: 2 }} variants={leftItemEffect}>
                         <Box

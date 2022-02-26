@@ -8,7 +8,7 @@ import useTrans from '../../hooks/useTrans';
 
 export default function ProfileSection({ closeInfo }) {
     // const bg = useColorModeValue('#FFFFFF', '#171717')
-    const bg = useColorModeValue('#F5F5F5', '#1E1E1E')
+    const bg = useColorModeValue('#F5F5F5', '#171A1E')
     const trans = useTrans()
 
 
