@@ -35,7 +35,7 @@ export default {
 
         'skill_title': 'Các kỹ năng',
         'programming_language': "Ngôn ngữ lập trình",
-        'framework_platform': "Framework/Platform",
+        'framework_platform': "Framework & Platform",
         'knowledge': 'Khác',
         'knowledge1': 'Hiểu rõ về OOP, quy trình Agile và Scrum,...',
         'knowledge2': 'Hiểu biết tốt về thiết kế phần mềm, thiết kế cơ sở dữ liệu, RestfulAPI,...',

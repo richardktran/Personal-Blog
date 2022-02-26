@@ -36,11 +36,11 @@ export default function About() {
                 mb={10}
             >
                 <Summary mb={50} px={12} />
-                <WorkExperience my={50} />
                 <Education my={50} />
                 <Skill />
-                <Certifications px={12} />
+                <WorkExperience my={50} />
                 <Projects />
+                <Certifications px={12} />
             </MotionFlex>
         </>
     )

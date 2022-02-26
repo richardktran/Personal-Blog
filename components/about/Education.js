@@ -1,12 +1,13 @@
 import React from 'react';
-import { Box, Flex, Heading, HStack, Image, Text, useColorModeValue, VStack } from '@chakra-ui/react';
+import { Box, Flex, Grid, GridItem, Heading, HStack, Image, Text, useColorModeValue, VStack } from '@chakra-ui/react';
 import { Icon } from '@iconify/react';
 import Timeline from '../common/Timeline';
 import useTrans from '../../hooks/useTrans';
 import { motion } from 'framer-motion';
 
 const MotionFlex = motion(Flex)
-const MotionHStack = motion(HStack)
+const MotionGrid = motion(Grid)
+const MotionGridItem = motion(GridItem)
 const listEffect = {
     visible: {
         opacity: 1,
@@ -34,23 +35,27 @@ export default function Education({ ...props }) {
     const whiteTextColor = "#ffffff"
 
     return (
-        <MotionFlex direction="column" alignSelf="center" alignItems="center"  {...props}>
-            <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" >
-                {trans.about.education_title}
-            </Heading>
-            <Flex direction="column" align="center" h="100%" minW="100%" my={5}>
-                <MotionHStack
-                    alignItems="flex-start"
-                    spacing={{ base: '3', md: '5', lg: '3', xl: '10' }}
+        <Box w="90%" px="auto">
+            <MotionFlex direction="column" alignSelf="center" alignItems="center"  {...props}>
+                <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" >
+                    {trans.about.education_title}
+                </Heading>
+                <MotionGrid
                     initial="hidden"
                     whileInView="visible"
                     variants={listEffect}
+                    // viewport={{ once: true }}
+                    my={5}
+                    templateRows='repeat(1, 1fr)'
+                    templateColumns={{ base: 'repeat(5, 1fr)', lg: 'repeat(7, 1fr)' }}
+                    gap={2}
                 >
-                    <MotionHStack alignItems="center" spacing={5} variants={leftItemEffect}>
+                    <MotionGrid display={{ base: 'none', lg: 'grid' }} colSpan={1} variants={leftItemEffect} justifySelf="end">
                         <Box boxSize="90px" pt={3}>
                             <Image src="/images/CTU_logo.png" alt="CTU logo" />
                         </Box>
-
+                    </MotionGrid>
+                    <MotionGridItem colSpan={2} variants={leftItemEffect} justifySelf="center">
                         <VStack alignItems="flex-end">
                             <Heading as="h6" color={stressTextColor} fontSize={{ base: 'xl', md: 'lg', lg: 'xl', xl: '2xl' }} pt={3} textAlign="right" >
                                 {trans.about.university}
@@ -60,27 +65,24 @@ export default function Education({ ...props }) {
                                 <nobr><Text textAlign="right" opacity="90%">2018 - 2022</Text></nobr>
                             </Flex>
                         </VStack>
-                    </MotionHStack>
+                    </MotionGridItem>
 
-                    <Timeline
-                        bg={timelineColor}
-                        icon={<Icon icon="cil:education" height="40" color={iconTimelineColor} />}
-                    />
+                    <MotionGridItem colSpan={1}>
+                        <Timeline
+                            bg={timelineColor}
+                            icon={<Icon icon="cil:education" height="40" color={iconTimelineColor} />}
+                        />
+                    </MotionGridItem>
 
-                    <MotionHStack variants={rightItemEffect}>
-                        <VStack>
-                            <Flex direction="column" color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8} px={5} py={3}>
-                                <nobr><Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.excellent}</Text></nobr>
-                                <nobr><Text><span><strong>GPA:</strong></span> 3.6/4</Text></nobr>
-                            </Flex>
-                        </VStack>
-                        {/* <Box boxSize="90px">
-                        </Box> */}
-                    </MotionHStack>
+                    <MotionGridItem colSpan={2}>
+                        <Flex direction="column" color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8} px={5} py={3}>
+                            <Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.excellent}</Text>
+                            <Text><span><strong>GPA:</strong></span> 3.6/4</Text>
+                        </Flex>
+                    </MotionGridItem>
 
-
-                </MotionHStack>
-            </Flex>
-        </MotionFlex >
+                </MotionGrid>
+            </MotionFlex >
+        </Box >
     )
 }

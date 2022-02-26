@@ -35,7 +35,7 @@ export default {
 
         'skill_title': 'skills',
         'programming_language': "Programming Language",
-        'framework_platform': "Framework/Platform",
+        'framework_platform': "Framework & Platform",
         'knowledge': 'knowledge',
         'knowledge1': 'Good understanding about OOP, the Agile and Scrum process,...',
         'knowledge2': 'Good understanding of software design, database design, RestfulAPI,...',

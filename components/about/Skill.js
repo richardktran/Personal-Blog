@@ -1,10 +1,10 @@
-import { Flex, Heading, Box, ListItem, Stack, Text, UnorderedList, useColorModeValue, VStack } from '@chakra-ui/react';
+import { Flex, Heading, Box, ListItem, Stack, Text, UnorderedList, useColorModeValue, VStack, Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
 import useTrans from '../../hooks/useTrans';
 import { motion } from 'framer-motion';
 
-const MotionFlex = motion(Flex)
-const MotionStack = motion(Stack)
+const MotionGrid = motion(Grid)
+const MotionGridItem = motion(GridItem)
 const MotionBox = motion(Box)
 const listEffect = {
     visible: {
@@ -41,69 +41,72 @@ export default function Skill({ ...props }) {
                 {trans.about.skill_title}
             </Heading>
             <Box
-                w="75%"
-                // bg="#958575"
+                w="90%"
                 mx="auto"
             >
-                <MotionStack
-                    justify="center"
-                    w="100%"
-                    // spacing={{ base: '5', md: '5', lg: '8', xl: '10' }}
-                    direction={{ base: 'column', md: 'row' }}
+                <MotionGrid
+                    templateRows='repeat(2, 1fr)'
+                    templateColumns='repeat(4, 1fr)'
+                    gap={4}
                     initial="hidden"
                     whileInView="visible"
                     variants={listEffect}
-
+                    viewport={{ once: true }}
                 >
-                    <MotionFlex
-                        variants={leftItemEffect}
-                        direction="column"
-                        align="flex-start"
-                        bgColor={bgColor}
-                        borderRadius={20}
-                        px={7} py={7}
-                        mx={3}
-                    >
-                        <Heading as="h6" color={stressTextColor} textTransform='uppercase' fontWeight="bold" fontSize="md" alignSelf="center">
-                            <nobr>{trans.about.programming_language}:</nobr>
-                        </Heading>
-                        <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
-                            <ListItem>PHP</ListItem>
-                            <ListItem>Javascript</ListItem>
-                            <ListItem>Python</ListItem>
-                            <ListItem>Dart</ListItem>
-                        </UnorderedList>
-                    </MotionFlex>
-                    <MotionFlex
-                        variants={rightItemEffect}
-                        direction="column"
-                        align="flex-start"
-                        bgColor={bgColor}
-                        borderRadius={20}
-                        px={7} py={7}
-                        mx={3}
-                    >
-                        <Heading as="h6" fontSize="md" textTransform='uppercase' fontWeight="bold" color={stressTextColor} alignSelf="center">
-                            {trans.about.framework_platform}:
-                        </Heading>
-                        <UnorderedList color={grayTextColor} fontWeight="normal" ml={7} mt={3}>
-                            <ListItem>Laravel</ListItem>
-                            <ListItem>NextJS/ReactJS</ListItem>
-                            <ListItem>NodeJS</ListItem>
-                            <ListItem>Flutter</ListItem>
-                        </UnorderedList>
-                    </MotionFlex>
-                </MotionStack >
-                <MotionFlex initial="hidden" whileInView="visible" variants={bottomItemEffect} direction="column" align="flex-start" bgColor={bgColor} borderRadius={20} my={5} px={7} py={7}>
-                    <Heading as="h6" fontSize="lg" textTransform='uppercase' color={stressTextColor} fontWeight="bold" alignSelf="center">
-                        {trans.about.knowledge}
-                    </Heading>
-                    <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
-                        <ListItem>{trans.about.knowledge1}</ListItem>
-                        <ListItem>{trans.about.knowledge2}</ListItem>
-                        <ListItem>{trans.about.knowledge3}</ListItem>
-                    </UnorderedList>
-                </MotionFlex>
+                    <MotionGridItem colSpan={{ base: 4, md: 2 }} variants={leftItemEffect}>
+                        <Box
+                            bgColor={bgColor}
+                            borderRadius={20}
+                            px={7} py={7}
+                        >
+                            <Heading as="h6" color={stressTextColor} textTransform='uppercase' fontWeight="bold" fontSize="md">
+                                {trans.about.programming_language}:
+                            </Heading>
+                            <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
+                                <ListItem>PHP</ListItem>
+                                <ListItem>Javascript</ListItem>
+                                <ListItem>Python</ListItem>
+                                <ListItem>Dart</ListItem>
+                                <ListItem>C++</ListItem>
+                            </UnorderedList>
+                        </Box>
+                    </MotionGridItem>
+                    <MotionGridItem colSpan={{ base: 4, md: 2 }} variants={rightItemEffect}>
+                        <Box
+                            bgColor={bgColor}
+                            borderRadius={20}
+                            px={7} py={7}
+                        >
+                            <Heading as="h6" fontSize="md" textTransform='uppercase' fontWeight="bold" color={stressTextColor} >
+                                {trans.about.framework_platform}:
+                            </Heading>
+                            <UnorderedList color={grayTextColor} fontWeight="normal" ml={7} mt={3}>
+                                <ListItem>Laravel</ListItem>
+                                <ListItem>ReactJS</ListItem>
+                                <ListItem>NodeJS</ListItem>
+                                <ListItem>Flutter</ListItem>
+                                <ListItem>Firebase</ListItem>
+                            </UnorderedList>
+                        </Box>
+                    </MotionGridItem>
+                    <MotionGridItem colSpan={4} variants={bottomItemEffect}>
+                        <Box
+                            bgColor={bgColor}
+                            borderRadius={20}
+                            px={7} py={7}
+                        >
+                            <Heading as="h6" fontSize="lg" textTransform='uppercase' color={stressTextColor} fontWeight="bold">
+                                {trans.about.knowledge}
+                            </Heading>
+                            <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
+                                <ListItem>{trans.about.knowledge1}</ListItem>
+                                <ListItem>{trans.about.knowledge2}</ListItem>
+                                <ListItem>{trans.about.knowledge3}</ListItem>
+                            </UnorderedList>
+                        </Box>
+                    </MotionGridItem>
+                </MotionGrid >
+
             </Box>
         </MotionBox >
     )
