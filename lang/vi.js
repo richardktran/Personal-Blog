@@ -29,6 +29,7 @@ export default {
         'education_title': "Học vấn",
         'university': "Trường Đại học Cần Thơ",
         'degree_grade': "Xếp loại",
+        'good': "Giỏi",
         'excellent': "Xuất sắc",
         'degree': "Bằng kỹ sư",
         'specialist': 'Kỹ thuật phần mềm',

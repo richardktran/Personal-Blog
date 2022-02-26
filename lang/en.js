@@ -29,6 +29,7 @@ export default {
         'education_title': "education",
         'university': "Can Tho University",
         'degree_grade': "Degree grade",
+        'good': "Good",
         'excellent': "Excellent",
         'degree': "Engineer Degree",
         'specialist': 'Software Engineering',

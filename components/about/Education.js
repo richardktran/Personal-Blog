@@ -76,8 +76,8 @@ export default function Education({ ...props }) {
 
                     <MotionGridItem colSpan={2} variants={rightItemEffect}>
                         <Flex direction="column" color={whiteTextColor} align="center" bgColor={cardColor} borderRadius={8} px={5} py={3}>
-                            <Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.excellent}</Text>
-                            <Text><span><strong>GPA:</strong></span> 3.6/4</Text>
+                            <Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.good}</Text>
+                            <Text><span><strong>GPA:</strong></span> 3.58/4</Text>
                         </Flex>
                     </MotionGridItem>
 
