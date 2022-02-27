@@ -48,7 +48,7 @@ export default function ProfileSection({ closeInfo }) {
                 />
 
                 <ProfileDetail
-                    email="richardannowit@gmail.com"
+                    email="richardktran.dev@gmail.com"
                     phone="(+84) 947 685 343 (VN)"
                     birthDate="01 May, 2000"
                 />
