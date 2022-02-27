@@ -49,5 +49,11 @@ export default {
         'vaip': 'Vietnam Association for Information Processing',
         'snackdown2019': 'Snackdown Certificates Participation 2019',
         'snackdown2017': 'Snackdown Certificates Participation 2017',
+
+        'project_title': 'projects',
+        'description': 'Description',
+        'technologies': 'Technologies',
+        'personal_web': 'Personal web blog',
+        'personal_web_description': 'Dự án này được xây dựng với mục đích chia sẻ kinh nghiệm, những khó khăn gặp phải và trải nghiệm của bản thân trong quá trình tìm tòi và học hỏi về lập trình. Ngoài ra còn chia sẻ các vấn đề về cuộc sống cũng như phương pháp quản lý thời gian, tài chính,...',
     }
 }

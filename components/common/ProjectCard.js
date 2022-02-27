@@ -1,6 +1,7 @@
 import { Box, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { motion } from 'framer-motion';
+import useTrans from '../../hooks/useTrans';
 
 const MotionBox = motion(Box)
 const MotionFlex = motion(Flex)
@@ -32,6 +33,7 @@ const rightItemEffect = {
 
 
 export default function ProjectCard({ projectName, description, technologies, imgUrl, titleColor, frameColor, subColor }) {
+    const trans = useTrans();
     return (
         <Box w="100%" mb={10}>
             <MotionStack
@@ -43,28 +45,24 @@ export default function ProjectCard({ projectName, description, technologies, im
                 direction="column"
                 position={{ base: 'static', md: 'relative' }}
             >
-                <MotionBox
+                <MotionFlex
                     w={{ base: '100%', md: '50%' }}
                     px={{ base: '3', md: '5', lg: '8', xl: '10' }}
                     variants={leftItemEffect}
+                    justify="center"
+                    alignItems="flex-start"
                 >
-                    <Box
-                        px={{ base: '3', md: '7', lg: '7', xl: '7' }}
-                        py={{ base: '3', md: '7', lg: '7', xl: '7' }}
-                        bg={frameColor}
-                        borderRadius="4px"
-                    >
-                        <MotionImage
-                            whileHover={{ scale: 1.2 }}
-                            src={imgUrl}
-                            borderRadius="8px"
-                            w="100%"
-                            objectFit="fill "
-                            alt={projectName}
-                        />
-                    </Box>
+                    <MotionImage
+                        whileHover={{ scale: 1.2 }}
+                        src={imgUrl}
+                        borderRadius="8px"
+                        // w="100%"
+                        maxH="303px"
+                        objectFit="fill "
+                        alt={projectName}
+                    />
 
-                </MotionBox>
+                </MotionFlex>
                 <MotionFlex
                     variants={rightItemEffect}
                     display="column"
@@ -96,11 +94,11 @@ export default function ProjectCard({ projectName, description, technologies, im
                         textAlign='left'
                         color={subColor}
                     >
-                        <span><strong>Description: </strong></span>
+                        <span><strong>{trans.about.description}: </strong></span>
                         {description}
                     </Text>
                     <Text fontSize={{ base: 'xs', lg: 'md', xl: 'md' }} lineHeight="tall">
-                        <span><strong>Technologies: </strong></span>
+                        <span><strong>{trans.about.technologies} </strong></span>
                         {technologies}
                     </Text>
                 </MotionFlex>

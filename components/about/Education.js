@@ -78,7 +78,7 @@ export default function Education({ ...props }) {
                         <Flex direction="column" maxW="16em" px={5} py={3} color={whiteTextColor} align="left" bgColor={cardColor} borderRadius={8}>
                             <Text><span><strong>{trans.about.degree_grade}:</strong></span> {trans.about.good}</Text>
                             <Text><span><strong>GPA:</strong></span> 3.58/4</Text>
-                            <Text>Achieve CTU Scholarship every year (2018-2021)</Text>
+                            <Text>{trans.about.scholarship}</Text>
                         </Flex>
                     </MotionGridItem>
 

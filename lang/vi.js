@@ -49,6 +49,13 @@ export default {
         'vaip': 'Hội Tin học Việt Nam',
         'snackdown2019': 'Chứng nhận tham gia cuộc thi lập trình Snackdown 2019',
         'snackdown2017': 'Chứng nhận tham gia cuộc thi lập trình Snackdown 2017',
+
+        'project_title': 'Các dự án',
+        'description': 'Mô tả dự án',
+        'technologies': 'Công nghệ',
+        'personal_web': 'Web blog cá nhân',
+        'personal_web_description': 'Dự án này được xây dựng với mục đích chia sẻ kinh nghiệm, những khó khăn gặp phải và trải nghiệm của bản thân trong quá trình tìm tòi và học hỏi về lập trình. Ngoài ra còn chia sẻ các vấn đề về cuộc sống cũng như phương pháp quản lý thời gian, tài chính,...',
+
     }
 
 
