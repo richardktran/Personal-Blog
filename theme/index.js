@@ -15,9 +15,7 @@ const colors = {
     stress_card_text: '#ffffff',
     stress_card_text_blur: 'gray.900',
 
-
     // Light-Dark color
-
 
     dark_heading_color: '#FF8700',
     light_heading_color: '#00AFB9',
