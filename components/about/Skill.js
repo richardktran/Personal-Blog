@@ -29,10 +29,10 @@ const bottomItemEffect = {
 }
 export default function Skill({ ...props }) {
     const trans = useTrans();
-    const headingColor = useColorModeValue('#00AFB9', '#FF8700');
-    const stressTextColor = useColorModeValue('#FFFFFF', '#FFFFFF');
-    const grayTextColor = useColorModeValue('#FFFFFF', '#FFFFFF');
-    const bgColor = useColorModeValue('#22B07D', '#22B07D')
+    const headingColor = useColorModeValue('light_heading_color', 'dark_heading_color');
+    const stressTextColor = 'stress_card_text'
+    const grayTextColor = 'stress_card_text_blur'
+    const bgColor = 'stress_card_bg'
 
 
     return (
@@ -59,7 +59,7 @@ export default function Skill({ ...props }) {
                             px={{ base: 3, md: 5, lg: 7, xl: 7 }}
                             py={{ base: 5, md: 5, lg: 7, xl: 7 }}
                         >
-                            <Heading as="h6" alignSelf="center" color={stressTextColor} textTransform='uppercase' fontWeight="bold" fontSize="md">
+                            <Heading as="h6" alignSelf="left" color={stressTextColor} textTransform='uppercase' fontWeight="bold" fontSize="md">
                                 {trans.about.programming_language}:
                             </Heading>
                             <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
@@ -79,7 +79,7 @@ export default function Skill({ ...props }) {
                             px={{ base: 3, md: 5, lg: 7, xl: 7 }}
                             py={{ base: 5, md: 5, lg: 7, xl: 7 }}
                         >
-                            <Heading as="h6" alignSelf="center" fontSize="md" textTransform='uppercase' fontWeight="bold" color={stressTextColor} >
+                            <Heading as="h6" alignSelf="left" fontSize="md" textTransform='uppercase' fontWeight="bold" color={stressTextColor} >
                                 {trans.about.framework_platform}:
                             </Heading>
                             <UnorderedList color={grayTextColor} fontWeight="normal" ml={7} mt={3}>

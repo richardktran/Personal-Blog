@@ -7,17 +7,17 @@ const CardName = ({ avatar, name, specialist, shortDescription }) => {
             <Heading
                 as="h1"
                 fontSize={{ base: 'sm', lg: 'lg', xl: '2xl' }}
-                color={useColorModeValue('#003049', '#FFFFFF')}
+                color={useColorModeValue('light_text_stress', 'dark_text_stress')}
                 letterSpacing='wider'
                 pt={2}
             >
                 {name}
             </Heading>
-            <Text fontSize={{ base: 'xs', lg: 'sm', xl: 'md' }} color={useColorModeValue('gray.800', '#E6E6E6')} py={2}>{specialist}</Text>
+            <Text fontSize={{ base: 'xs', lg: 'sm', xl: 'md' }} color={useColorModeValue('light_text_blur', 'dark_text_blur')} py={2}>{specialist}</Text>
             <Text
                 fontSize={{ base: 'xs', lg: 'xs', xl: 'sm' }}
                 fontWeight='normal'
-                color={useColorModeValue('gray.800', '#E6E6E6')}
+                color={useColorModeValue('light_text_blur', 'dark_text_blur')}
                 px={{ base: 6, lg: 7, xl: 10 }}
                 py={2}
                 lineHeight={{ base: 'base', lg: 'taller', xl: 'taller' }}

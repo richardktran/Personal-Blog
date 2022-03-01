@@ -3,8 +3,8 @@ import { Text, Flex, HStack, Spacer, useColorModeValue } from '@chakra-ui/react'
 
 
 const Social = ({ linkedinUrl, githubUrl }) => {
-    const fillColor = useColorModeValue('#003049', '#ffffff');
-    const blurColor = useColorModeValue('#323232', '#DBDBDB');
+    const fillColor = useColorModeValue('light_text_stress', 'dark_text_stress');
+    const blurColor = useColorModeValue('light_text_blur', 'dark_text_blur');
     return (
         <Flex justify='center' w='100%' h={10} my={4} px={{ base: 5, sm: 5, md: 5, lg: 6, xl: 8 }}>
             <HStack as='a' target="_blank" rel="noopener noreferrer" href={linkedinUrl} >

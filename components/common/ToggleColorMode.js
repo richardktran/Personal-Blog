@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 export default function ToggleColorMode() {
     const { toggleColorMode } = useColorMode()
+    const toggleColor = useColorModeValue('purple', 'orange');
     return (
         <AnimatePresence exitBeforeEnter initial={false}>
             <motion.div
@@ -18,7 +19,7 @@ export default function ToggleColorMode() {
             >
                 <IconButton
                     aria-label="Toggle theme"
-                    colorScheme={useColorModeValue('purple', 'orange')}
+                    colorScheme={toggleColor}
                     icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
                     onClick={toggleColorMode}
 

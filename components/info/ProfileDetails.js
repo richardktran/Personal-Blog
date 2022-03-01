@@ -4,8 +4,8 @@ import useTrans from '../../hooks/useTrans';
 
 const ProfileDetail = ({ email, phone, birthDate }) => {
     const trans = useTrans();
-    const fillColor = useColorModeValue('#323232', '#ffffff');
-    const blurColor = useColorModeValue('#323232', '#DBDBDB');
+    const fillColor = useColorModeValue('light_text_stress', 'dark_text_stress');
+    const blurColor = useColorModeValue('light_text_blur', 'dark_text_blur');
 
     return (
         <Flex direction="column" w='80%'>

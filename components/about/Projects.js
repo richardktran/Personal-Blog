@@ -7,11 +7,10 @@ import { motion } from 'framer-motion';
 const MotionFlex = motion(Flex)
 export default function Projects({ ...props }) {
     const trans = useTrans();
-    const headingColor = useColorModeValue('#00AFB9', '#FF8700');
-    const stressTextColor = useColorModeValue('#003049', '#FFFFFF');
-    const grayTextColor = useColorModeValue('#1A202C', '#E6E6E6');
-    const bgColor = useColorModeValue('#22B07D', '#22B07D')
-    const frameColor = useColorModeValue('#E1E3E5', '#454545')
+    const headingColor = useColorModeValue('light_heading_color', 'dark_heading_color');
+    const stressTextColor = useColorModeValue('light_text_stress', 'dark_text_stress');
+    const grayTextColor = useColorModeValue('light_text_blur', 'dark_text_blur');
+    const frameColor = useColorModeValue('#003049', '#454545')
 
 
     return (

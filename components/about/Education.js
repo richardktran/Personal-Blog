@@ -26,13 +26,13 @@ const rightItemEffect = {
 }
 export default function Education({ ...props }) {
     const trans = useTrans();
-    const headingColor = useColorModeValue('#00AFB9', '#FF8700');
-    const stressTextColor = useColorModeValue('#003049', '#FFFFFF');
-    const grayTextColor = useColorModeValue('gray.800', '#E6E6E6');
-    const timelineColor = useColorModeValue('#1081E8', '#FFFFFF')
-    const iconTimelineColor = useColorModeValue('#FFFFFF', '#22B07D')
-    const cardColor = useColorModeValue('#22B07D', "#22B07D")
-    const whiteTextColor = "#ffffff"
+    const headingColor = useColorModeValue('light_heading_color', 'dark_heading_color');
+    const stressTextColor = useColorModeValue('light_text_stress', 'dark_text_stress');
+    const grayTextColor = useColorModeValue('light_text_blur', 'dark_text_blur');
+    const timelineColor = useColorModeValue('light_timeline_color', 'dark_timeline_color')
+    const iconTimelineColor = useColorModeValue('light_icon_timeline_color', 'dark_icon_timeline_color')
+    const cardColor = 'stress_card_bg'
+    const whiteTextColor = "stress_card_text"
 
     return (
         <Box w="90%" px={{ base: 3, md: 5, lg: 8 }}>
@@ -70,7 +70,8 @@ export default function Education({ ...props }) {
                     <MotionGridItem colSpan={1}>
                         <Timeline
                             bg={timelineColor}
-                            icon={<Icon icon="cil:education" height="40" color={iconTimelineColor} />}
+                            iconColor={iconTimelineColor}
+                            icon={<Icon icon="cil:education" height="40" />}
                         />
                     </MotionGridItem>
 

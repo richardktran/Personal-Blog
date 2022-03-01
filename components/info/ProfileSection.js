@@ -7,8 +7,7 @@ import { CloseIcon } from '@chakra-ui/icons'
 import useTrans from '../../hooks/useTrans';
 
 export default function ProfileSection({ closeInfo }) {
-    // const bg = useColorModeValue('#FFFFFF', '#171717')
-    const bg = useColorModeValue('#F5F5F5', '#171A1E')
+    const bg = useColorModeValue('light_card_bg', 'dark_card_bg')
     const trans = useTrans()
 
 

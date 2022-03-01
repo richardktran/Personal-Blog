@@ -7,8 +7,8 @@ const MotionFlex = motion(Flex);
 
 export default function Summary({ ...props }) {
     const trans = useTrans();
-    const headingColor = useColorModeValue('#00AFB9', '#FF8700');
-    const textColor = useColorModeValue('#6B6B6B', '#E6E6E6');
+    const headingColor = useColorModeValue('light_heading_color', 'dark_heading_color');
+    const textColor = useColorModeValue('light_text_blur', 'dark_text_blur')
 
     return (
         <MotionFlex justify="center" align="center" direction="column" color={textColor}  {...props}>

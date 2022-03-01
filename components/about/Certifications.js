@@ -7,10 +7,10 @@ import useTrans from '../../hooks/useTrans';
 const MotionFlex = motion(Flex)
 export default function Certifications({ ...props }) {
     const trans = useTrans();
-    const headingColor = useColorModeValue('#00AFB9', '#FF8700');
-    const stressTextColor = useColorModeValue('#FFFFFF', '#FFFFFF');
-    const grayTextColor = useColorModeValue('#FFFFFF', '#FFFFFF');
-    const bgColor = useColorModeValue('#22B07D', '#22B07D')
+    const headingColor = useColorModeValue('light_heading_color', 'dark_heading_color');
+    const stressTextColor = 'stress_card_text'
+    const grayTextColor = 'stress_card_text_blur'
+    const bgColor = 'stress_card_bg'
 
 
     return (

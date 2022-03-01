@@ -33,6 +33,7 @@ const MotionButton = motion(Button);
 
 
 export default function Navbar({ path, toggleShowInfo }) {
+
     const [cookie, setCookie] = useCookies(['NEXT_LOCALE']);
     const trans = useTrans()
     const router = useRouter()
@@ -63,7 +64,6 @@ export default function Navbar({ path, toggleShowInfo }) {
                 width="100%"
                 height="5rem"
                 css={{ backdropFilter: 'blur(10px)' }}
-                // bg={useColorModeValue('#FFFFFF', '#1E1E1E')}
                 zIndex={0}
             >
                 <Flex
@@ -77,7 +77,7 @@ export default function Navbar({ path, toggleShowInfo }) {
                         <Avatar size="lg" name="Logo" src="/images/avatar.jpg" />
                     </Heading>
                     <Box>
-                        <IoMdUndo size={30} color="#81E6D9" />
+                        <IoMdUndo size={30} color="#22B07D" />
                         <Text>{trans.navbar.look_profile}</Text>
                     </Box>
 

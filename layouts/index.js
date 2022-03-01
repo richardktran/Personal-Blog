@@ -39,7 +39,7 @@ export default function Layout({ children, router }) {
                 pt='6rem'
                 w='100%'
                 minH='100vh'
-                bg={useColorModeValue('#F5F5F5', '#121519')}
+                bg={useColorModeValue('light_bg', 'dark_bg')}
                 direction='column'
             >
                 {children}
