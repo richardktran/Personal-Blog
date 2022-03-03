@@ -31,13 +31,13 @@ export default function Skill({ ...props }) {
     const trans = useTrans();
     const headingColor = useColorModeValue('light_heading_color', 'dark_heading_color');
     const stressTextColor = 'stress_card_text'
-    const grayTextColor = 'stress_card_text_blur'
+    const grayTextColor = 'stress_card_text'
     const bgColor = 'stress_card_bg'
 
 
     return (
         <MotionBox w={{ base: '80%', md: '80%', lg: '70%', xl: '70%' }} my={3}  {...props}>
-            <Heading as="h1" color={headingColor} textAlign="center" textTransform='uppercase' fontWeight="bold" my={5}>
+            <Heading as="h1" fontSize={{ base: '2xl', md: '4xl' }} color={headingColor} textAlign="center" textTransform='uppercase' fontWeight="bold" my={5}>
                 {trans.about.skill_title}
             </Heading>
             <Box
@@ -100,7 +100,7 @@ export default function Skill({ ...props }) {
                             py={{ base: 5, md: 5, lg: 7, xl: 7 }}
                         >
                             <Heading as="h6" alignSelf="center" fontSize="lg" textTransform='uppercase' color={stressTextColor} fontWeight="bold">
-                                {trans.about.knowledge}
+                                {trans.about.knowledge}:
                             </Heading>
                             <UnorderedList ml={7} mt={3} color={grayTextColor} fontWeight="normal">
                                 <ListItem>{trans.about.knowledge1}</ListItem>

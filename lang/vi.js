@@ -16,7 +16,7 @@ export default {
         'read_more': 'Xem thêm'
     },
     about: {
-        'summary_title': 'Tóm tắt',
+        'summary_title': 'Mục tiêu nghề nghiệp',
         'summary1': "Mục tiêu ngắn hạn và trước hết của tôi là được làm việc trong môi trường năng động, thoải mái và sáng tạo, có thể phát huy hết khả năng cũng như sự mày mò học hỏi của mình, nâng cao sự sáng tạo cho bản thân để phục vụ tốt hơn cho mục tiêu dài hạn của mình.",
         'summary2': "Mục tiêu dài hạn của tôi là áp dụng được các kiến thức đã có để đóng góp vào những mục tiêu quan trọng của nơi tôi làm việc, trở thành một người có giá trị, có ảnh hưởng lớn không những cho sự phát triển của công ty mà còn cho cả những người xung quanh mình, cho xã hội và cho bản thân.",
 
@@ -55,6 +55,11 @@ export default {
         'technologies': 'Công nghệ',
         'personal_web': 'Web blog cá nhân',
         'personal_web_description': 'Dự án này được xây dựng với mục đích chia sẻ kinh nghiệm, những khó khăn gặp phải và trải nghiệm của bản thân trong quá trình tìm tòi và học hỏi về lập trình. Ngoài ra còn chia sẻ các vấn đề về cuộc sống cũng như phương pháp quản lý thời gian, tài chính,...',
+        'qr_description': 'Ứng dụng hỗ trợ quét mã QR để tra cứu các thông tin về các hiện vật trong viện bảo tàng một cách nhanh chóng và chính xác.',
+        'healcare_description': 'Ứng dụng di động hỗ trợ người dùng và bác sĩ trong việc đặt, sắp xếp lịch hẹn giữa bệnh nhân và bác sĩ sao cho hiệu quả trong việc thăm khám chửa bệnh cũng như là rút ngắn được thời gian chờ đợi khám bệnh như thông thường.',
+        'wowfood_description': 'Trang web nhỏ này giúp người dùng có thể xem, lựa chọn và đặt món ăn mà mình ưa thích một cách nhanh chóng và trực quan.',
+        'bookworm_description': 'Với Bookworm, người dùng có thể xem, đánh giá và đặt mua sách trực tuyến một cách nhanh chóng và tiện lợi.',
+        'qf_description': 'Trang web giúp học sinh có thể tra cứu các công thức toán, lý, hóa, sinh,... một cách nhanh chóng, làm tăng tốc độ làm bài tập và có các mẹo để ghi nhớ công thức, giúp cho việc ghi nhớ công thức trở nên dễ dàng và hiệu quả hơn.',
 
     }
 

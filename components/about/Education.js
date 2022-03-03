@@ -37,7 +37,7 @@ export default function Education({ ...props }) {
     return (
         <Box w="90%" px={{ base: 3, md: 5, lg: 8 }}>
             <MotionFlex direction="column" alignSelf="center" alignItems="center"  {...props}>
-                <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" >
+                <Heading as="h1" fontSize={{ base: '2xl', md: '4xl' }} color={headingColor} textTransform='uppercase' fontWeight="bold" >
                     {trans.about.education_title}
                 </Heading>
                 <MotionGrid

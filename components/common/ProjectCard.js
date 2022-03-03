@@ -32,7 +32,7 @@ const rightItemEffect = {
 }
 
 
-export default function ProjectCard({ projectName, description, technologies, imgUrl, titleColor, frameColor, subColor }) {
+export default function ProjectCard({ projectName, description, technologies, imgUrl, srcUrl, titleColor, frameColor, subColor }) {
     const trans = useTrans();
     return (
         <Box w="100%" mb={10}>
@@ -46,6 +46,7 @@ export default function ProjectCard({ projectName, description, technologies, im
                 position={{ base: 'static', md: 'relative' }}
             >
                 <MotionFlex
+
                     w={{ base: '100%', md: '50%' }}
                     px={{ base: '3', md: '5', lg: '8', xl: '10' }}
                     variants={leftItemEffect}
@@ -53,9 +54,10 @@ export default function ProjectCard({ projectName, description, technologies, im
                     alignItems="flex-start"
                 >
                     <MotionImage
+                        boxShadow='dark-lg'
                         whileHover={{ scale: 1.2 }}
                         src={imgUrl}
-                        borderRadius="8px"
+                        borderRadius="lg"
                         // w="100%"
                         maxH="303px"
                         objectFit="fill "
@@ -93,6 +95,7 @@ export default function ProjectCard({ projectName, description, technologies, im
                         lineHeight={{ base: 'base', lg: 'tall', xl: 'tall' }}
                         textAlign='left'
                         color={subColor}
+                        pb={3}
                     >
                         <span><strong>{trans.about.description}: </strong></span>
                         {description}
@@ -100,6 +103,12 @@ export default function ProjectCard({ projectName, description, technologies, im
                     <Text fontSize={{ base: 'xs', lg: 'md', xl: 'md' }} lineHeight="tall">
                         <span><strong>{trans.about.technologies} </strong></span>
                         {technologies}
+                    </Text>
+                    <Text fontSize={{ base: 'xs', lg: 'md', xl: 'md' }} lineHeight="tall">
+                        <span><strong>Source code: </strong></span>
+                        <Text as="span" fontWeight="bold" color="tag_color">
+                            <a href={srcUrl} target="_blank">Click here</a>
+                        </Text>
                     </Text>
                 </MotionFlex>
             </MotionStack>

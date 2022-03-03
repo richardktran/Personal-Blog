@@ -12,7 +12,9 @@ export default function Summary({ ...props }) {
 
     return (
         <MotionFlex justify="center" align="center" direction="column" {...props}>
-            <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold">{trans.about.summary_title}</Heading>
+            <Heading as="h1" fontSize={{ base: 'xl', md: '3xl', lg: '4xl' }} color={headingColor} textTransform='uppercase' fontWeight="bold">
+                {trans.about.summary_title}
+            </Heading>
             <Text my={3} style={{ textIndent: 20 }} color={textColor}>
                 {trans.about.summary1}
             </Text>

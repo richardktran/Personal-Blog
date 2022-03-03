@@ -15,7 +15,7 @@ export default function Certifications({ ...props }) {
 
     return (
         <MotionFlex direction="column" w="100%" alignItems="center" justifyItems="center" {...props}>
-            <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" my={5}>
+            <Heading as="h1" fontSize={{ base: '2xl', md: '4xl' }} color={headingColor} textTransform='uppercase' fontWeight="bold" my={5}>
                 {trans.about.certifications_title}
             </Heading>
             <CertificateCard

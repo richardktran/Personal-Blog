@@ -15,59 +15,65 @@ export default function Projects({ ...props }) {
 
     return (
         <MotionFlex direction="column" w="100%" alignItems="center" justifyItems="center" {...props}>
-            <Heading as="h1" color={headingColor} textTransform='uppercase' fontWeight="bold" my={5}>
+            <Heading as="h1" fontSize={{ base: '2xl', md: '4xl' }} color={headingColor} textTransform='uppercase' fontWeight="bold" my={5}>
                 {trans.about.project_title}
             </Heading>
             <ProjectCard
-                projectName={`${trans.about.personal_web} (In progress)`}
+                projectName={`${trans.about.personal_web_name} (In progress)`}
                 description={trans.about.personal_web_description}
                 technologies="ReactJS/NextJS, Laravel"
                 imgUrl="/images/projects/blog1.png"
+                srcUrl="https://github.com/richardktran/Personal-Blog"
                 frameColor={frameColor}
                 subColor={grayTextColor}
                 titleColor={stressTextColor}
             />
             <ProjectCard
                 projectName="QR Scanner Museum"
-                description="Ứng dụng hỗ trợ quét mã QR để tra cứu các thông tin về các hiện vật trong viện bảo tàng một cách nhanh chóng."
+                description={trans.about.qr_description}
                 technologies="Flutter, Laravel"
                 imgUrl="/images/projects/qr.png"
+                srcUrl="https://github.com/richardktran/Flutter_QR_Scanner_Museum"
                 frameColor={frameColor}
                 subColor={grayTextColor}
                 titleColor={stressTextColor}
             />
             <ProjectCard
-                projectName="Can Tho Healcare"
-                description="Ứng dụng di động hỗ trợ người dùng và bác sĩ trong việc đặt, sắp xếp lịch hẹn giữa bệnh nhân và bác sĩ sao cho hiệu quả trong việc thăm khám chửa bệnh cũng như là rút ngắn được thời gian chờ đợi khám bệnh như thông thường."
+                projectName="HealthCare in Can Tho"
+                description={trans.about.healcare_description}
                 technologies="Flutter, Firebase"
                 imgUrl="/images/projects/cthealth1.png"
+                srcUrl="https://github.com/richardktran/Health-Care-In-CanTho"
                 frameColor={frameColor}
                 subColor={grayTextColor}
                 titleColor={stressTextColor}
             />
             <ProjectCard
                 projectName="Wowfood"
-                description="Trang web nhỏ này giúp người dùng có thể xem, lựa chọn và đặt món ăn mà mình ưa thích một cách nhanh chóng và trực quan."
+                description={trans.about.wowfood_description}
                 technologies="NodeJS, ReactJS, MySQL"
                 imgUrl="/images/projects/wowfood.png"
+                srcUrl="https://github.com/richardktran/wowfood-project"
                 frameColor={frameColor}
                 subColor={grayTextColor}
                 titleColor={stressTextColor}
             />
             <ProjectCard
                 projectName="Bookworm"
-                description="Với Bookworm, người dùng có thể xem, đánh giá và đặt mua sách trực tuyến một cách nhanh chóng và tiện lợi."
+                description={trans.about.bookworm_description}
                 technologies="Laravel, ReactJS, PostgreSQL"
                 imgUrl="/images/projects/bookworm.png"
+                srcUrl="https://github.com/richardktran/Bookworm-App"
                 frameColor={frameColor}
                 subColor={grayTextColor}
                 titleColor={stressTextColor}
             />
             <ProjectCard
                 projectName="Quick Formula"
-                description="Trang web giúp học sinh có thể tra cứu các công thức toán, lý, hóa, sinh,... một cách nhanh chóng, làm tăng tốc độ làm bài tập và có các mẹo để ghi nhớ công thức, giúp cho việc ghi nhớ công thức trở nên dễ dàng và hiệu quả hơn."
-                technologies="PHP, Javascript, MySQL"
+                description={trans.about.qf_description}
+                technologies="HTML, CSS, PHP, Javascript, MySQL"
                 imgUrl="/images/projects/qf1.png"
+                srcUrl="https://github.com/richardktran/Quick-Formula"
                 frameColor={frameColor}
                 subColor={grayTextColor}
                 titleColor={stressTextColor}
