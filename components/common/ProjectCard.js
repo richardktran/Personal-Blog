@@ -107,7 +107,7 @@ export default function ProjectCard({ projectName, description, technologies, im
                     <Text fontSize={{ base: 'xs', lg: 'md', xl: 'md' }} lineHeight="tall">
                         <span><strong>Source code: </strong></span>
                         <Text as="span" fontWeight="bold" color="tag_color">
-                            <a href={srcUrl} target="_blank">Click here</a>
+                            <a href={srcUrl} rel="noreferrer" target="_blank">Click here</a>
                         </Text>
                     </Text>
                 </MotionFlex>
