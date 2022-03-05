@@ -53,7 +53,7 @@ export default {
         'project_title': 'Các dự án',
         'description': 'Mô tả dự án',
         'technologies': 'Công nghệ',
-        'personal_web': 'Web blog cá nhân',
+        'personal_web_name': 'Web blog cá nhân',
         'personal_web_description': 'Dự án này được xây dựng với mục đích chia sẻ kinh nghiệm, những khó khăn gặp phải và trải nghiệm của bản thân trong quá trình tìm tòi và học hỏi về lập trình. Ngoài ra còn chia sẻ các vấn đề về cuộc sống cũng như phương pháp quản lý thời gian, tài chính,...',
         'qr_description': 'Ứng dụng hỗ trợ quét mã QR để tra cứu các thông tin về các hiện vật trong viện bảo tàng một cách nhanh chóng và chính xác.',
         'healcare_description': 'Ứng dụng di động hỗ trợ người dùng và bác sĩ trong việc đặt, sắp xếp lịch hẹn giữa bệnh nhân và bác sĩ sao cho hiệu quả trong việc thăm khám chửa bệnh cũng như là rút ngắn được thời gian chờ đợi khám bệnh như thông thường.',
